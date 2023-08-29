@@ -1,7 +1,11 @@
-## Hướng dẫn cài đặt
+## Usage
++The application allows for translation and merging of subtitles into a single file
++It is useful for watching movies, films, videos, clips, etc. with bilingual subtitles on devices that do not support multiple subtitles
 
-Để cài đặt ứng dụng này, làm theo các bước sau:
+## Installation Guide
 
-1. Clone repository này về máy của bạn.
-2. Run file Addsub.py
+To install this application, follow these steps:
+
+1. Clone this repository to your machine.
+2. Run the Addsub.py file.
 ***
