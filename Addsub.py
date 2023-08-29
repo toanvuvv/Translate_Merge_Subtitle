@@ -20,7 +20,8 @@ def combine_subtitles(sub1_path, sub2_path, output_path):
 
                 # Add subtitles from sub1 with color #ff9980
                 while i < len(lines1) and lines1[i].strip() != "":
-                    combined_lines.append(f'<font color="#ff9980">{lines1[i]}</font>')
+                    combined_lines.append(
+                        f'<font color="#ff9980">{lines1[i]}</font>')
                     i += 1
 
                 # Add subtitles from sub2 without changing color
@@ -37,7 +38,6 @@ def combine_subtitles(sub1_path, sub2_path, output_path):
             out.writelines(combined_lines)
 
 
-
 # Sử dụng hàm
-combine_subtitles('002 What Is Node.js and Why Use It_.en.srt', '002 What Is Node.js and Why Use It_.en.vi.srt', '002 What Is Node.js and Why Use It_.combined.srt')
-
+combine_subtitles('002 What Is Node.js and Why Use It_.en.srt',
+                  '002 What Is Node.js and Why Use It_.en.vi.srt', '002 What Is Node.js and Why Use It_.combined.srt')

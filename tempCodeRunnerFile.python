@@ -1,0 +1,4 @@
+# Add subtitles from sub1 with color #ff9980
+                while i < len(lines1) and lines1[i].strip() != "":
+                    combined_lines.append(f'<font color="#ff9980">{lines1[i]}</font>')
+                    i += 1
