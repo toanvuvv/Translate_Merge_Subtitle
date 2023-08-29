@@ -22,3 +22,5 @@ For example: To change the color of sub 1 to #ff9980, change the following code:
                     i += 1
 ```
 ***
+## Demo
+![image](https://github.com/toanvuvv/Translate_Merge_Subtitle/assets/87163954/fee48278-5eb8-4a18-af40-37161f93fb10)
