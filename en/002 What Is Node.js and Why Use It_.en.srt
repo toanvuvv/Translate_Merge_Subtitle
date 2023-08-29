@@ -1,0 +1,624 @@
+1
+00:00:01,270 --> 00:00:04,520
+<v Narrator>Now before diving into some NodeJS code,</v>
+
+2
+00:00:04,520 --> 00:00:06,700
+let's do a high level overview
+
+3
+00:00:06,700 --> 00:00:08,990
+of what NodeJS actually is,
+
+4
+00:00:08,990 --> 00:00:11,800
+what we use it for and why we use Node
+
+5
+00:00:11,800 --> 00:00:13,843
+instead of other technologies.
+
+6
+00:00:15,410 --> 00:00:17,570
+So, the official definition is that
+
+7
+00:00:17,570 --> 00:00:19,480
+NodeJS is a JavaScript Runtime
+
+8
+00:00:19,480 --> 00:00:23,783
+built on Google's open-source V8 JavaScript engine.
+
+9
+00:00:23,783 --> 00:00:26,279
+Now, what does that actually mean?
+
+10
+00:00:26,279 --> 00:00:29,289
+Well, let's start by trying to understand
+
+11
+00:00:29,289 --> 00:00:31,174
+what the JavaScript Runtime
+
+12
+00:00:31,174 --> 00:00:33,913
+and the V8 engine actually are.
+
+13
+00:00:35,190 --> 00:00:37,914
+So, you have probably already used JavaScript before
+
+14
+00:00:37,914 --> 00:00:42,120
+and it was probably always just inside a browser, right?
+
+15
+00:00:42,120 --> 00:00:45,400
+Because any browser natively understands
+
+16
+00:00:45,400 --> 00:00:49,250
+HTML, CSS, and JavaScript and no matter
+
+17
+00:00:49,250 --> 00:00:51,760
+if you write vanilla JavaScript or some
+
+18
+00:00:51,760 --> 00:00:54,713
+JavaScript framework like React or Angular code,
+
+19
+00:00:54,713 --> 00:00:56,370
+that's all just JavaScript
+
+20
+00:00:56,370 --> 00:00:59,920
+that gets executed right in the browser.
+
+21
+00:00:59,920 --> 00:01:01,500
+So, in this case, the browser
+
+22
+00:01:01,500 --> 00:01:03,454
+is then the JavaScript Runtime.
+
+23
+00:01:03,454 --> 00:01:06,110
+But, what if we could take JavaScript
+
+24
+00:01:06,110 --> 00:01:08,311
+out of the browser and simply execute
+
+25
+00:01:08,311 --> 00:01:10,988
+or JavaScript code somewhere else without
+
+26
+00:01:10,988 --> 00:01:14,860
+all the restrictions that we have in the browser?
+
+27
+00:01:14,860 --> 00:01:17,580
+Well, it turns out that we actually can.
+
+28
+00:01:17,580 --> 00:01:19,955
+And the solution for this, as you can guess,
+
+29
+00:01:19,955 --> 00:01:23,425
+is called NodeJS and so Node JS
+
+30
+00:01:23,425 --> 00:01:25,830
+is just another JavaScript Runtime.
+
+31
+00:01:25,830 --> 00:01:29,252
+It's just like a container, like an environment,
+
+32
+00:01:29,252 --> 00:01:32,010
+in which a program written in JavaScript
+
+33
+00:01:32,010 --> 00:01:37,010
+can be executed, but outside of any browser whatsoever.
+
+34
+00:01:37,230 --> 00:01:39,850
+All right, it's actually a bit more complex
+
+35
+00:01:39,850 --> 00:01:42,908
+than this, of course, but for now, this is enough.
+
+36
+00:01:42,908 --> 00:01:45,380
+Now, who actually does execute
+
+37
+00:01:45,380 --> 00:01:47,438
+the code if not the browser?
+
+38
+00:01:47,438 --> 00:01:50,070
+And that's where the V8 engine
+
+39
+00:01:50,070 --> 00:01:52,770
+developed by Google comes into play.
+
+40
+00:01:52,770 --> 00:01:55,420
+Because that is exactly where JavaScript code
+
+41
+00:01:55,420 --> 00:01:59,800
+will be parsed and run in NodeJS, okay?
+
+42
+00:01:59,800 --> 00:02:02,819
+So, I hope that now the definition of NodeJS
+
+43
+00:02:02,819 --> 00:02:07,116
+being a JavaScript Runtime on the V8 JavaScript engine
+
+44
+00:02:07,116 --> 00:02:10,104
+makes a lot more sense and again,
+
+45
+00:02:10,104 --> 00:02:12,742
+this is just a very high level overview
+
+46
+00:02:12,742 --> 00:02:16,060
+of what Node is and how it works.
+
+47
+00:02:16,060 --> 00:02:18,430
+We are gonna go into a lot of detail
+
+48
+00:02:18,430 --> 00:02:20,926
+about how Node really works behind the scenes
+
+49
+00:02:20,926 --> 00:02:23,860
+right in the next section, but at this point,
+
+50
+00:02:23,860 --> 00:02:26,152
+I just want you to get a quick overview
+
+51
+00:02:26,152 --> 00:02:28,810
+so that you can start learning the fundamentals
+
+52
+00:02:28,810 --> 00:02:32,203
+of NodeJS in practice throughout this section.
+
+53
+00:02:34,000 --> 00:02:36,230
+Anyway, now that we have JavaScript
+
+54
+00:02:36,230 --> 00:02:38,400
+outside of the browser in a kind of
+
+55
+00:02:38,400 --> 00:02:40,704
+stand alone environment which just NodeJS,
+
+56
+00:02:40,704 --> 00:02:44,058
+we can do so many more things with JavaScript
+
+57
+00:02:44,058 --> 00:02:46,690
+that were completely impossible before
+
+58
+00:02:46,690 --> 00:02:48,254
+like accessing the file system,
+
+59
+00:02:48,254 --> 00:02:50,515
+or better networking capabilities
+
+60
+00:02:50,515 --> 00:02:53,054
+are not possible with NodeJS
+
+61
+00:02:53,054 --> 00:02:55,630
+and all these factors together give us
+
+62
+00:02:55,630 --> 00:02:59,750
+the perfect conditions for using NodeJS as a web server
+
+63
+00:02:59,750 --> 00:03:02,327
+meaning that now we can finally use JavaScript
+
+64
+00:03:02,327 --> 00:03:05,550
+on the server side of web development
+
+65
+00:03:05,550 --> 00:03:08,020
+in order to build fast, highly scalable
+
+66
+00:03:08,020 --> 00:03:10,810
+network applications for powering the back-end
+
+67
+00:03:10,810 --> 00:03:13,540
+all for websites or web applications.
+
+68
+00:03:13,540 --> 00:03:15,990
+And this is absolutely fantastic
+
+69
+00:03:15,990 --> 00:03:19,030
+and game-changing for web development.
+
+70
+00:03:19,030 --> 00:03:22,103
+So, let's now take a look at some use cases for Node
+
+71
+00:03:22,103 --> 00:03:25,703
+and why it's such a great fit for back-end development.
+
+72
+00:03:27,010 --> 00:03:29,430
+And the first thing that we need to talk about
+
+73
+00:03:29,430 --> 00:03:31,060
+is the fact that Node applications
+
+74
+00:03:31,060 --> 00:03:34,603
+are so fast and so scalable because NodeJS
+
+75
+00:03:34,603 --> 00:03:36,705
+is single threaded based on
+
+76
+00:03:36,705 --> 00:03:40,110
+an event driven, non-blocking I/O model
+
+77
+00:03:40,110 --> 00:03:43,932
+which makes NodeJS very lightweight and efficient.
+
+78
+00:03:43,932 --> 00:03:47,140
+Now, that, of course, sounds super complicated,
+
+79
+00:03:47,140 --> 00:03:50,040
+I know, but once more we're gonna talk about
+
+80
+00:03:50,040 --> 00:03:52,146
+exactly what all of this means
+
+81
+00:03:52,146 --> 00:03:54,110
+a little late in the course.
+
+82
+00:03:54,110 --> 00:03:56,250
+But, for now, just keep in mind
+
+83
+00:03:56,250 --> 00:03:59,052
+that Node is perfect for building super fast,
+
+84
+00:03:59,052 --> 00:04:02,910
+and scalable data-intensive web applications.
+
+85
+00:04:02,910 --> 00:04:06,280
+And that makes NodeJS a perfect fit for building
+
+86
+00:04:06,280 --> 00:04:08,580
+all different kinds of applications like
+
+87
+00:04:08,580 --> 00:04:11,830
+building an API with a database behind it
+
+88
+00:04:11,830 --> 00:04:16,830
+and preferably a non-relational NoSQL database like MongoDB
+
+89
+00:04:17,090 --> 00:04:20,250
+and this is actually exactly what we're gonna do later
+
+90
+00:04:20,250 --> 00:04:24,568
+in this course as we dive deeper and deeper into NodeJS.
+
+91
+00:04:24,568 --> 00:04:27,350
+But, there is, of course, all sorts of other apps
+
+92
+00:04:27,350 --> 00:04:30,007
+that we can build like data streaming applications
+
+93
+00:04:30,007 --> 00:04:33,739
+such as YouTube or Netflix, real-time chat apps,
+
+94
+00:04:33,739 --> 00:04:36,600
+or even server-side web applications
+
+95
+00:04:36,600 --> 00:04:39,430
+where the entire content is simply generated
+
+96
+00:04:39,430 --> 00:04:42,055
+right on the server, so as you see,
+
+97
+00:04:42,055 --> 00:04:44,684
+the possibilities really are endless.
+
+98
+00:04:44,684 --> 00:04:47,650
+But, there is actually, also, a type of apps
+
+99
+00:04:47,650 --> 00:04:49,990
+that we should not build with Node.
+
+100
+00:04:49,990 --> 00:04:51,890
+And this is when our app needs
+
+101
+00:04:51,890 --> 00:04:54,380
+some super heavy server-side processing
+
+102
+00:04:54,380 --> 00:04:57,750
+like having image manipulations, video conversion,
+
+103
+00:04:57,750 --> 00:05:01,270
+file compression or anything like that, all right.
+
+104
+00:05:01,270 --> 00:05:04,930
+And you will learn why that is once we dive deeper
+
+105
+00:05:04,930 --> 00:05:07,410
+into how Node actually works.
+
+106
+00:05:07,410 --> 00:05:09,500
+So, in this case, we're better off
+
+107
+00:05:09,500 --> 00:05:14,010
+using something like Ruby on Rails, PHP, or Python.
+
+108
+00:05:14,010 --> 00:05:16,460
+Because NodeJS just wasn't developed
+
+109
+00:05:16,460 --> 00:05:19,910
+for these use cases and although there are solutions
+
+110
+00:05:19,910 --> 00:05:22,480
+for dealing with them, we should always use
+
+111
+00:05:22,480 --> 00:05:25,157
+the right tool for the task at hand.
+
+112
+00:05:25,157 --> 00:05:28,361
+Okay, so these are the types of applications
+
+113
+00:05:28,361 --> 00:05:31,977
+that we can and cannot build using NodeJS.
+
+114
+00:05:31,977 --> 00:05:34,780
+And if you choose to use Node,
+
+115
+00:05:34,780 --> 00:05:37,540
+well, then you are in good company because
+
+116
+00:05:37,540 --> 00:05:41,206
+many top companies like Netflix, Uber, PayPal,
+
+117
+00:05:41,206 --> 00:05:45,140
+Ebay and many many more have already started using
+
+118
+00:05:45,140 --> 00:05:48,910
+NodeJS which really proves that the technology
+
+119
+00:05:48,910 --> 00:05:52,850
+is stable enough at this point to be used in production.
+
+120
+00:05:52,850 --> 00:05:56,125
+Now, of course there are more reasons for using Node,
+
+121
+00:05:56,125 --> 00:05:59,040
+and the biggest one is probably that using
+
+122
+00:05:59,040 --> 00:06:01,650
+the same language across your entire stack
+
+123
+00:06:01,650 --> 00:06:03,758
+both on the front-end and the back-end
+
+124
+00:06:03,758 --> 00:06:07,420
+is a lot easier for you or for your team.
+
+125
+00:06:07,420 --> 00:06:09,010
+First, you don't have to learn
+
+126
+00:06:09,010 --> 00:06:11,070
+a new programming language for building
+
+127
+00:06:11,070 --> 00:06:13,580
+your back-end and, also, you don't have to
+
+128
+00:06:13,580 --> 00:06:15,824
+keep switching back and forth between language
+
+129
+00:06:15,824 --> 00:06:18,450
+which will make the entire building process
+
+130
+00:06:18,450 --> 00:06:20,533
+faster and more efficient.
+
+131
+00:06:20,533 --> 00:06:23,107
+Believe me, it's really really amazing
+
+132
+00:06:23,107 --> 00:06:26,230
+to be able to use JavaScript to build
+
+133
+00:06:26,230 --> 00:06:29,215
+your entire application from start to finish.
+
+134
+00:06:29,215 --> 00:06:31,727
+It's absolutely fantastic really.
+
+135
+00:06:31,727 --> 00:06:34,150
+And another great reason for using Node
+
+136
+00:06:34,150 --> 00:06:38,502
+is that there is a huge library of open-source packages
+
+137
+00:06:38,502 --> 00:06:41,450
+or modules, as we can also call them,
+
+138
+00:06:41,450 --> 00:06:43,884
+available for everyone for free.
+
+139
+00:06:43,884 --> 00:06:47,190
+It's called NPM and you've probably heard of it
+
+140
+00:06:47,190 --> 00:06:48,976
+or even used it already.
+
+141
+00:06:48,976 --> 00:06:51,170
+And, of course, we're also gonna start
+
+142
+00:06:51,170 --> 00:06:53,563
+using packages right in the section.
+
+143
+00:06:54,430 --> 00:06:56,920
+And, finally, it's also good to know
+
+144
+00:06:56,920 --> 00:06:59,420
+that there is a huge active community
+
+145
+00:06:59,420 --> 00:07:02,020
+of Node developers out there that are constantly
+
+146
+00:07:02,020 --> 00:07:05,650
+improving NodeJS and helping beginners like you.
+
+147
+00:07:05,650 --> 00:07:08,670
+And, so you can really rely on the technology
+
+148
+00:07:08,670 --> 00:07:11,929
+for all your projects in the years to come.
+
+149
+00:07:11,929 --> 00:07:15,343
+Okay, so that was a very brief intro
+
+150
+00:07:15,343 --> 00:07:20,040
+and overview of NodeJS and some of it's use cases.
+
+151
+00:07:20,040 --> 00:07:21,920
+So, for the rest of this section,
+
+152
+00:07:21,920 --> 00:07:23,810
+we will now use Node to create
+
+153
+00:07:23,810 --> 00:07:25,950
+a very simple web server and build
+
+154
+00:07:25,950 --> 00:07:28,750
+an extremely simple API, so that
+
+155
+00:07:28,750 --> 00:07:30,160
+you can get familiar with
+
+156
+00:07:30,160 --> 00:07:32,763
+the basic principles of Node development.
+

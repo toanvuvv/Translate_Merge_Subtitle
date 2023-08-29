@@ -1,0 +1,492 @@
+1
+00:00:01,410 --> 00:00:03,890
+<v Narrator>This is a really exciting lecture</v>
+
+2
+00:00:03,890 --> 00:00:07,230
+cause you're gonna learn how to read data from files,
+
+3
+00:00:07,230 --> 00:00:10,393
+and also how to write data into files.
+
+4
+00:00:12,110 --> 00:00:15,050
+And we already imported the built-in module
+
+5
+00:00:15,050 --> 00:00:17,450
+that we need for that in the last lecture,
+
+6
+00:00:17,450 --> 00:00:20,910
+and so let's now get rid of this code
+
+7
+00:00:20,910 --> 00:00:23,990
+and start using the FS module.
+
+8
+00:00:23,990 --> 00:00:26,707
+So we use fs.readfilesync, okay.
+
+9
+00:00:30,720 --> 00:00:34,250
+And sync stands for synchronous,
+
+10
+00:00:34,250 --> 00:00:36,210
+and you will start learning about synchronous
+
+11
+00:00:36,210 --> 00:00:40,240
+and asynchronous right in the next video, okay.
+
+12
+00:00:40,240 --> 00:00:43,760
+So this is the synchronous version of file reading.
+
+13
+00:00:43,760 --> 00:00:47,040
+There is also an asynchronous version.
+
+14
+00:00:47,040 --> 00:00:50,880
+So, the read file sync function takes two arguments.
+
+15
+00:00:50,880 --> 00:00:54,640
+The first one is the path to the file that we're reading
+
+16
+00:00:54,640 --> 00:00:57,300
+and then also the character encoded.
+
+17
+00:00:57,300 --> 00:00:59,700
+So, first the path to the file,
+
+18
+00:00:59,700 --> 00:01:02,163
+and the file is in the txt folder,
+
+19
+00:01:04,130 --> 00:01:06,973
+and it is the input one.
+
+20
+00:01:08,170 --> 00:01:12,260
+So, this text that I have here about the avocado
+
+21
+00:01:12,260 --> 00:01:15,740
+is what we're gonna read into a variable.
+
+22
+00:01:15,740 --> 00:01:18,060
+And I'm not sure if you're gonna be able
+
+23
+00:01:18,060 --> 00:01:21,950
+to see this emoji here right on your operating system,
+
+24
+00:01:21,950 --> 00:01:24,710
+but if you're on Windows 8 or Windows 10
+
+25
+00:01:24,710 --> 00:01:26,960
+then that's probably going to work just fine.
+
+26
+00:01:28,000 --> 00:01:31,420
+Okay, so we specified a path there,
+
+27
+00:01:31,420 --> 00:01:33,730
+and there are multiple ways of doing that,
+
+28
+00:01:33,730 --> 00:01:36,573
+but for now I'm gonna go with the simplest one.
+
+29
+00:01:37,490 --> 00:01:42,490
+So, all I'm gonna do is set it in the /txt/input.txt.
+
+30
+00:01:47,460 --> 00:01:50,470
+So again, we're starting at the home folder,
+
+31
+00:01:50,470 --> 00:01:52,100
+which is basically the folder
+
+32
+00:01:52,100 --> 00:01:55,350
+where the index.js file is located,
+
+33
+00:01:55,350 --> 00:01:57,430
+so that's the dot in there,
+
+34
+00:01:57,430 --> 00:02:00,060
+and then we move into the txt folder,
+
+35
+00:02:00,060 --> 00:02:02,633
+and from there input.txt.
+
+36
+00:02:03,670 --> 00:02:05,080
+Then here the second one we have
+
+37
+00:02:05,080 --> 00:02:07,550
+to define the character encoding,
+
+38
+00:02:07,550 --> 00:02:10,320
+which is utf8, usually,
+
+39
+00:02:10,320 --> 00:02:12,710
+at least if you're just using English.
+
+40
+00:02:12,710 --> 00:02:15,200
+Okay, and if you don't specify this,
+
+41
+00:02:15,200 --> 00:02:18,770
+we get back something called a buffer, okay,
+
+42
+00:02:18,770 --> 00:02:20,210
+and that's not really what we want.
+
+43
+00:02:20,210 --> 00:02:22,900
+We really just want the text.
+
+44
+00:02:22,900 --> 00:02:26,770
+And so, calling this function here will now read the data
+
+45
+00:02:26,770 --> 00:02:29,980
+from the file and return it to us,
+
+46
+00:02:29,980 --> 00:02:31,600
+and so we need save that somewhere
+
+47
+00:02:31,600 --> 00:02:34,083
+and we put it into a variable.
+
+48
+00:02:35,200 --> 00:02:40,200
+So let's say textIn because it's a more text input.
+
+49
+00:02:43,430 --> 00:02:46,780
+Okay, and then let's log it to the console
+
+50
+00:02:46,780 --> 00:02:49,510
+just to see if it works.
+
+51
+00:02:49,510 --> 00:02:53,230
+Give it a second, and now we need to run this here again.
+
+52
+00:02:53,230 --> 00:02:56,370
+So in the terminal, I can just use the up arrow
+
+53
+00:02:56,370 --> 00:02:57,993
+to run the previous command.
+
+54
+00:02:59,230 --> 00:03:02,540
+So here it is nodeindex.js again.
+
+55
+00:03:02,540 --> 00:03:07,540
+Hit return, and let's see, and indeed here we go.
+
+56
+00:03:07,550 --> 00:03:11,090
+So here is the content of that file.
+
+57
+00:03:11,090 --> 00:03:12,560
+So, perfect.
+
+58
+00:03:12,560 --> 00:03:15,900
+We now know how to read stuff from files.
+
+59
+00:03:15,900 --> 00:03:17,700
+Congratulations.
+
+60
+00:03:17,700 --> 00:03:22,700
+Okay, but we also want to know how to write to files.
+
+61
+00:03:23,010 --> 00:03:26,520
+So let's create some new variable here with some more text,
+
+62
+00:03:26,520 --> 00:03:29,423
+and then write it into a new file.
+
+63
+00:03:30,490 --> 00:03:35,233
+So let's call that one textOut, so for output.
+
+64
+00:03:36,180 --> 00:03:38,630
+And basically let's just write a string
+
+65
+00:03:38,630 --> 00:03:41,653
+where we will then include this text in.
+
+66
+00:03:42,520 --> 00:03:44,680
+I'm gonna be using a template string here,
+
+67
+00:03:44,680 --> 00:03:46,160
+and at this point I'm gonna assume
+
+68
+00:03:46,160 --> 00:03:50,270
+that you're kinda familiar with the es6 syntax, okay.
+
+69
+00:03:50,270 --> 00:03:52,560
+So we already used const here,
+
+70
+00:03:52,560 --> 00:03:57,530
+which is an es6 way of declaring variables instead of var,
+
+71
+00:03:57,530 --> 00:04:01,410
+and now the template string, which is another es6 thing.
+
+72
+00:04:01,410 --> 00:04:04,050
+So before the es6, if you wanted to add something
+
+73
+00:04:04,050 --> 00:04:07,870
+to text in, you would have to use the plus operator.
+
+74
+00:04:07,870 --> 00:04:12,870
+So let's say, "this is" and then space and then text in.
+
+75
+00:04:18,170 --> 00:04:21,330
+Okay, so you would have to use the plus operator,
+
+76
+00:04:21,330 --> 00:04:23,440
+but if it's a template string it's much easier.
+
+77
+00:04:23,440 --> 00:04:27,770
+All we have to do is use the backticks, then some text,
+
+78
+00:04:27,770 --> 00:04:29,380
+and then into this string you can
+
+79
+00:04:29,380 --> 00:04:31,453
+very easily plug in the variable.
+
+80
+00:04:32,765 --> 00:04:37,383
+So let's say, "This is what we know about the avocado."
+
+81
+00:04:40,370 --> 00:04:45,370
+Then we use this syntax to input the variable, okay,
+
+82
+00:04:46,840 --> 00:04:50,220
+and so basically inside of these curly braces here
+
+83
+00:04:50,220 --> 00:04:52,960
+we can write any JavaScript that we want.
+
+84
+00:04:52,960 --> 00:04:56,950
+So it's not just for plugging in variables straight away,
+
+85
+00:04:56,950 --> 00:04:58,630
+we can also do a lot of calculations
+
+86
+00:04:58,630 --> 00:05:02,830
+or any javaScript expression that we wanted in here.
+
+87
+00:05:02,830 --> 00:05:05,823
+Now, let's say a new line character.
+
+88
+00:05:06,980 --> 00:05:09,383
+So that's a new line, okay.
+
+89
+00:05:11,360 --> 00:05:14,870
+And just to show you that we can actually use JavaScript
+
+90
+00:05:14,870 --> 00:05:18,240
+inside of these curly braces here.
+
+91
+00:05:18,240 --> 00:05:21,463
+So this dollar sign and then curly braces.
+
+92
+00:05:22,900 --> 00:05:27,900
+So date, or actually date like this, dot now.
+
+93
+00:05:28,450 --> 00:05:31,420
+Okay, so that is our string,
+
+94
+00:05:31,420 --> 00:05:35,480
+which has this text here in together with the text
+
+95
+00:05:35,480 --> 00:05:38,290
+that we read before from the variable.
+
+96
+00:05:38,290 --> 00:05:42,070
+And so now let's write that to a new file.
+
+97
+00:05:42,070 --> 00:05:44,800
+So again, we use the FS module,
+
+98
+00:05:44,800 --> 00:05:47,033
+and this time, writeFileSync.
+
+99
+00:05:51,200 --> 00:05:54,683
+Okay, and again we specify the path to the file,
+
+100
+00:05:55,680 --> 00:05:58,223
+and we still want it in the txt folder,
+
+101
+00:05:59,830 --> 00:06:04,830
+and we call it output.txt, okay.
+
+102
+00:06:06,560 --> 00:06:08,710
+And now we have to actually specify
+
+103
+00:06:08,710 --> 00:06:12,520
+what we want to write into that file, right,
+
+104
+00:06:12,520 --> 00:06:15,523
+and tell us the text out variable.
+
+105
+00:06:16,720 --> 00:06:19,280
+And this doesn't return anything meaningful
+
+106
+00:06:19,280 --> 00:06:22,780
+until we don't save anything to any variable.
+
+107
+00:06:22,780 --> 00:06:27,380
+All we do is to finally log something more to the console,
+
+108
+00:06:27,380 --> 00:06:31,033
+like just informing if the file has been written.
+
+109
+00:06:34,830 --> 00:06:37,680
+Okay, so let's test it out again.
+
+110
+00:06:37,680 --> 00:06:40,163
+I'm gonna clear the console with command K.
+
+111
+00:06:41,700 --> 00:06:46,600
+Hit the arrow up key, enter, and maybe you saw it.
+
+112
+00:06:46,600 --> 00:06:50,210
+We here now have this new file called Output,
+
+113
+00:06:50,210 --> 00:06:52,757
+and if I open it up, then you see,
+
+114
+00:06:52,757 --> 00:06:54,660
+"This is what we know about the avocado,"
+
+115
+00:06:54,660 --> 00:06:58,620
+which is what we wrote in the index.js,
+
+116
+00:06:58,620 --> 00:07:01,020
+and then this is the text that came
+
+117
+00:07:01,020 --> 00:07:04,620
+before from the input file, right.
+
+118
+00:07:04,620 --> 00:07:06,810
+Then the new line that we created,
+
+119
+00:07:06,810 --> 00:07:09,280
+and then created on this date basically.
+
+120
+00:07:09,280 --> 00:07:10,980
+So this is date.now,
+
+121
+00:07:10,980 --> 00:07:14,753
+so it's just a timestamp in milliseconds.
+
+122
+00:07:16,590 --> 00:07:18,400
+All right, and this is how you read
+
+123
+00:07:18,400 --> 00:07:22,423
+and write to and from files in Node.JS.
+

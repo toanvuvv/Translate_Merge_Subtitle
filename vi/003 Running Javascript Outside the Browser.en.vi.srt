@@ -1,0 +1,544 @@
+1
+00:00:01,540 --> 00:00:03,040
+<v Giảng viên>Chào mừng trở lại.</v>
+
+2
+00:00:03,040 --> 00:00:06,120
+Vì vậy tôi hy vọng rằng bạn đã cài đặt Node
+
+3
+00:00:06,120 --> 00:00:08,100
+trên máy tính của bạn vào thời điểm này.
+
+4
+00:00:08,100 --> 00:00:09,830
+Và vì vậy, bây giờ chúng ta hãy thực sự tiếp tục
+
+5
+00:00:09,830 --> 00:00:12,793
+và sử dụng Node lần đầu tiên.
+
+6
+00:00:14,530 --> 00:00:16,760
+Và để bắt đầu với phần này,
+
+7
+00:00:16,760 --> 00:00:19,760
+vui lòng vào tập tin khởi đầu khóa học
+
+8
+00:00:19,760 --> 00:00:24,300
+và sao chép thư mục này vào thư mục làm việc của bạn, được chứ?
+
+9
+00:00:24,300 --> 00:00:27,120
+Bây giờ, nếu bạn chưa tải xuống các tệp khóa học,
+
+10
+00:00:27,120 --> 00:00:29,360
+vui lòng truy cập kho lưu trữ GitHub,
+
+11
+00:00:29,360 --> 00:00:31,670
+được liên kết xuyên suốt khóa học,
+
+12
+00:00:31,670 --> 00:00:35,390
+và bạn sẽ tìm thấy tất cả các tập tin bạn cần trong đó.
+
+13
+00:00:35,390 --> 00:00:37,290
+Sau đó hãy tiếp tục và mở ra
+
+14
+00:00:37,290 --> 00:00:39,770
+thư mục trong trình soạn thảo mã của bạn.
+
+15
+00:00:39,770 --> 00:00:42,070
+Và tôi đang sử dụng Mã VS ở đây.
+
+16
+00:00:42,070 --> 00:00:45,400
+Và thực ra tôi đã tải nó lên rồi.
+
+17
+00:00:45,400 --> 00:00:49,310
+Đây là thư mục Node Farm này.
+
+18
+00:00:49,310 --> 00:00:51,290
+Bây giờ trong video này, chúng ta sẽ thực sự
+
+19
+00:00:51,290 --> 00:00:53,500
+vẫn chưa bắt đầu dự án.
+
+20
+00:00:53,500 --> 00:00:55,760
+Nhưng thay vào đó, chúng ta sẽ tương tác với Node
+
+21
+00:00:55,760 --> 00:00:58,010
+sử dụng dòng lệnh.
+
+22
+00:00:58,010 --> 00:01:00,530
+Và để làm được điều đó, tôi sẽ sử dụng thiết bị đầu cuối tích hợp
+
+23
+00:01:00,530 --> 00:01:04,270
+mà VS Code có, hãy nhấn lại quyền kiểm soát để thực hiện điều đó.
+
+24
+00:01:04,270 --> 00:01:07,090
+Thực tế là lệnh này mà bạn thấy ở đây.
+
+25
+00:01:07,090 --> 00:01:11,180
+Hoặc bạn có thể vào View và Terminal.
+
+26
+00:01:11,180 --> 00:01:13,540
+Bây giờ nếu bạn thích sử dụng ứng dụng khác
+
+27
+00:01:13,540 --> 00:01:15,720
+đối với thiết bị đầu cuối, điều đó cũng tốt
+
+28
+00:01:15,720 --> 00:01:17,330
+nhưng trong suốt khóa học này,
+
+29
+00:01:17,330 --> 00:01:19,150
+Tôi sẽ luôn sử dụng thiết bị đầu cuối
+
+30
+00:01:19,150 --> 00:01:21,330
+được tích hợp ngay vào Mã VS
+
+31
+00:01:21,330 --> 00:01:23,600
+để chúng ta không phải nhảy lung tung
+
+32
+00:01:23,600 --> 00:01:26,040
+giữa các cửa sổ khác nhau rất nhiều.
+
+33
+00:01:26,040 --> 00:01:29,640
+Bây giờ, để bắt đầu viết một số mã Node ở đây trong bảng điều khiển,
+
+34
+00:01:29,640 --> 00:01:31,753
+tất cả những gì chúng ta phải làm là viết nút,
+
+35
+00:01:32,790 --> 00:01:36,150
+vì bạn đã cài đặt Node.js trên máy tính của mình
+
+36
+00:01:36,150 --> 00:01:38,490
+và sau đó chỉ cần nhấn enter.
+
+37
+00:01:38,490 --> 00:01:41,320
+Và điều này sau đó sẽ mở Node REPL,
+
+38
+00:01:41,320 --> 00:01:45,080
+viết tắt của vòng lặp đọc-eval-print.
+
+39
+00:01:45,080 --> 00:01:47,910
+Về cơ bản ở đây, chúng ta có thể viết mã JavaScript
+
+40
+00:01:47,910 --> 00:01:50,390
+giống như trong một thiết bị đầu cuối bình thường.
+
+41
+00:01:50,390 --> 00:01:52,363
+Ví dụ: chúng ta có thể định nghĩa các biến.
+
+42
+00:01:56,250 --> 00:01:58,830
+Và nó đây rồi.
+
+43
+00:01:58,830 --> 00:02:01,760
+Vì vậy, chúng tôi vừa xác định biến tên.
+
+44
+00:02:01,760 --> 00:02:04,030
+Và trên thực tế, chúng ta có thể viết bất kỳ đoạn mã JavaScript nào
+
+45
+00:02:04,030 --> 00:02:06,590
+mà chúng ta thích ở đây, được chứ?
+
+46
+00:02:06,590 --> 00:02:08,890
+Vì vậy, đó là vì vào cuối ngày,
+
+47
+00:02:08,890 --> 00:02:12,080
+Node.js thực sự chỉ là thời gian chạy JavaScript,
+
+48
+00:02:12,080 --> 00:02:14,210
+như chúng ta vừa thấy trước đây.
+
+49
+00:02:14,210 --> 00:02:15,780
+Vậy chúng ta có thể làm gì khác?
+
+50
+00:02:15,780 --> 00:02:19,100
+Chà, thực sự thì bất kỳ kiểu diễn đạt nào cũng sẽ có tác dụng.
+
+51
+00:02:19,100 --> 00:02:22,680
+Chúng ta hãy làm một số phép toán ở đây chẳng hạn.
+
+52
+00:02:22,680 --> 00:02:24,730
+Được rồi, mọi JavaScript sẽ hoạt động
+
+53
+00:02:24,730 --> 00:02:26,760
+và bạn thấy rằng chúng tôi thực sự
+
+54
+00:02:26,760 --> 00:02:31,040
+đã xác định biến này ở đây bằng cách sử dụng const, đó là ES6
+
+55
+00:02:31,040 --> 00:02:34,750
+và điều đó hoàn toàn không có vấn đề gì trong Node.js.
+
+56
+00:02:34,750 --> 00:02:38,100
+Vì vậy, nó hỗ trợ ES6 trong tất cả các phiên bản mới hơn
+
+57
+00:02:38,100 --> 00:02:40,800
+ra khỏi hộp mà không có vấn đề gì.
+
+58
+00:02:40,800 --> 00:02:42,250
+Đó là bởi vì chúng ta không chạy
+
+59
+00:02:42,250 --> 00:02:44,850
+JavaScript này trong bất kỳ trình duyệt nào,
+
+60
+00:02:44,850 --> 00:02:48,380
+nhưng nó sẽ luôn chạy trên máy chủ, được chứ?
+
+61
+00:02:48,380 --> 00:02:52,400
+Vì vậy, trên thực tế, chúng tôi vừa đưa JavaScript ra khỏi trình duyệt
+
+62
+00:02:52,400 --> 00:02:56,350
+và chúng tôi đang chạy nó bên trong ứng dụng Node này.
+
+63
+00:02:56,350 --> 00:02:59,470
+Bây giờ nếu chúng ta muốn thoát JS REPL,
+
+64
+00:02:59,470 --> 00:03:03,750
+vậy một lần nữa, vòng lặp đọc-đánh giá-in này mà Node cung cấp cho chúng ta,
+
+65
+00:03:03,750 --> 00:03:06,210
+có nhiều cách khác nhau để làm điều đó.
+
+66
+00:03:06,210 --> 00:03:08,310
+Đầu tiên là viết exit
+
+67
+00:03:08,310 --> 00:03:09,660
+hoặc thực tế là .exit
+
+68
+00:03:11,420 --> 00:03:16,060
+và do đó, điều này đã thoát khỏi quá trình Node này, REPL này
+
+69
+00:03:16,060 --> 00:03:18,300
+và thế là điều đó bắt đầu lại để tôi có thể
+
+70
+00:03:18,300 --> 00:03:20,050
+cho bạn xem thêm một số thứ.
+
+71
+00:03:20,050 --> 00:03:25,050
+Vì vậy, một lần nữa, chỉ cần gõ Node, nhấn enter và thế là xong.
+
+72
+00:03:25,260 --> 00:03:27,000
+Ồ, và nhân tiện, nếu bạn muốn
+
+73
+00:03:27,000 --> 00:03:29,160
+xóa thiết bị đầu cuối của bạn như tôi vừa làm,
+
+74
+00:03:29,160 --> 00:03:31,910
+tất cả những gì bạn phải làm là nhấn lệnh K
+
+75
+00:03:31,910 --> 00:03:34,890
+và sau đó sẽ xóa dòng lệnh
+
+76
+00:03:34,890 --> 00:03:39,160
+và có lẽ trên Windows đó là control K phải không?
+
+77
+00:03:39,160 --> 00:03:43,890
+Dù sao, chúng tôi sử dụng .exit để thoát REPL
+
+78
+00:03:43,890 --> 00:03:47,030
+nhưng chúng ta cũng có thể nhấn điều khiển D,
+
+79
+00:03:47,030 --> 00:03:49,980
+và đó không phải là mệnh lệnh, nó thực sự là sự kiểm soát,
+
+80
+00:03:49,980 --> 00:03:53,600
+vì vậy điều khiển D sẽ làm tương tự.
+
+81
+00:03:53,600 --> 00:03:55,610
+Nhưng hãy nhanh chóng nhập lại
+
+82
+00:03:55,610 --> 00:03:58,830
+vì còn có một số thứ tôi muốn cho bạn xem.
+
+83
+00:03:58,830 --> 00:04:00,960
+Vì vậy nếu bạn nhấn tab ngay bây giờ,
+
+84
+00:04:00,960 --> 00:04:02,870
+có lẽ bạn phải chạm vào nó hai lần,
+
+85
+00:04:02,870 --> 00:04:05,590
+đôi khi điều đó xảy ra vì lý do nào đó,
+
+86
+00:04:05,590 --> 00:04:07,880
+nhưng dù sao đi nữa, bằng cách nhấn vào tab,
+
+87
+00:04:07,880 --> 00:04:10,220
+bạn có thể thấy tất cả các biến toàn cục
+
+88
+00:04:10,220 --> 00:04:12,720
+có sẵn trong Node.
+
+89
+00:04:12,720 --> 00:04:14,100
+Vậy là bạn có tất cả mọi thứ
+
+90
+00:04:14,100 --> 00:04:15,370
+mà chúng ta đã quen rồi
+
+91
+00:04:15,370 --> 00:04:17,670
+giống như hàm tạo mảng
+
+92
+00:04:17,670 --> 00:04:19,830
+hoặc hàm tạo chuỗi
+
+93
+00:04:19,830 --> 00:04:21,290
+hoặc Toán
+
+94
+00:04:21,290 --> 00:04:23,900
+hoặc Số ở đây,
+
+95
+00:04:23,900 --> 00:04:25,950
+nhưng cũng có đủ thứ
+
+96
+00:04:25,950 --> 00:04:27,670
+thuộc về Node.
+
+97
+00:04:27,670 --> 00:04:31,840
+Ví dụ: https và fs hoặc tiền điện tử của bạn
+
+98
+00:04:31,840 --> 00:04:33,950
+và đây là các mô-đun Node
+
+99
+00:04:33,950 --> 00:04:35,710
+mà chúng ta sẽ nói nhiều hơn về
+
+100
+00:04:35,710 --> 00:04:37,880
+một lát sau trong phần này.
+
+101
+00:04:37,880 --> 00:04:40,650
+Nhưng hiện tại, bạn thấy rằng chúng tôi có đủ loại
+
+102
+00:04:40,650 --> 00:04:43,120
+của các biến toàn cục mà chúng ta có thể truy cập
+
+103
+00:04:43,120 --> 00:04:47,320
+bất cứ khi nào chúng ta muốn trong Node.js, được chứ?
+
+104
+00:04:47,320 --> 00:04:51,000
+Ngoài ra, một thủ thuật hay khác là biến gạch dưới.
+
+105
+00:04:51,000 --> 00:04:53,440
+Vì vậy, trước tiên hãy để tôi cho bạn xem một cái gì đó.
+
+106
+00:04:53,440 --> 00:04:55,270
+Vì vậy, một tính toán khác chẳng hạn.
+
+107
+00:04:55,270 --> 00:04:59,220
+Ba nhân tám được 24
+
+108
+00:04:59,220 --> 00:05:03,710
+và bây giờ có thể sử dụng dấu gạch dưới cộng với sáu
+
+109
+00:05:03,710 --> 00:05:07,180
+và vì vậy điều này sẽ cho chúng ta 30
+
+110
+00:05:07,180 --> 00:05:09,610
+và điều đó có nghĩa là dấu gạch dưới
+
+111
+00:05:09,610 --> 00:05:12,330
+về cơ bản là kết quả trước đó của bạn.
+
+112
+00:05:12,330 --> 00:05:16,110
+Vậy chúng ta đã có 24, và gạch dưới bây giờ là 24
+
+113
+00:05:16,110 --> 00:05:19,330
+và 24 cộng sáu bằng 30.
+
+114
+00:05:19,330 --> 00:05:22,130
+Vậy nếu bây giờ chúng ta gạch dưới âm 30,
+
+115
+00:05:22,130 --> 00:05:24,410
+điều đó sẽ cho chúng ta số không, phải không?
+
+116
+00:05:24,410 --> 00:05:26,390
+Và vâng, nó đã làm được.
+
+117
+00:05:26,390 --> 00:05:31,390
+Được rồi, và cuối cùng, tab bạn vừa nhấn trước đó,
+
+118
+00:05:31,460 --> 00:05:34,440
+bạn cũng có thể nhấn nút đó, ví dụ:
+
+119
+00:05:34,440 --> 00:05:36,010
+trên một trong những hàm tạo này
+
+120
+00:05:36,010 --> 00:05:37,930
+mà chúng ta đã biết như chuỗi.
+
+121
+00:05:37,930 --> 00:05:41,240
+Vì vậy, Chuỗi. và bây giờ bằng cách thêm tab,
+
+122
+00:05:41,240 --> 00:05:43,420
+bạn có thể thấy tất cả các phương thức hoặc thuộc tính
+
+123
+00:05:43,420 --> 00:05:45,350
+có sẵn cho chúng tôi.
+
+124
+00:05:45,350 --> 00:05:47,860
+Một lần nữa, đôi khi bạn phải đánh nó hai lần
+
+125
+00:05:47,860 --> 00:05:49,400
+nhưng rồi chúng ta ở đây.
+
+126
+00:05:49,400 --> 00:05:53,140
+Vì vậy, ví dụ, chúng ta có độ dài hoặc hasOwnProperty,
+
+127
+00:05:53,140 --> 00:05:55,810
+và tất cả các loại phương pháp ở đây
+
+128
+00:05:55,810 --> 00:05:58,330
+mà chúng ta đã biết rồi phải không?
+
+129
+00:05:58,330 --> 00:06:00,470
+Và bây giờ, để thoát REPL,
+
+130
+00:06:00,470 --> 00:06:03,863
+hãy nhớ tất cả những gì bạn phải làm là nhấn control D.
+
+131
+00:06:04,882 --> 00:06:08,700
+Được rồi, sau đó ra lệnh cho K xóa bảng điều khiển,
+
+132
+00:06:08,700 --> 00:06:10,200
+và thế là xong.
+
+133
+00:06:10,200 --> 00:06:12,230
+Đó là tất cả những gì tôi muốn cho bạn thấy
+
+134
+00:06:12,230 --> 00:06:14,680
+trong video đầu tiên này.
+
+135
+00:06:14,680 --> 00:06:17,530
+Về cơ bản thì bây giờ chúng ta có thể viết JavaScript
+
+136
+00:06:17,530 --> 00:06:21,603
+bên ngoài trình duyệt bằng Node.js như thế này.
+

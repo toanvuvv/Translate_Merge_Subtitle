@@ -1,0 +1,436 @@
+1
+00:00:01,460 --> 00:00:02,890
+<v Người hướng dẫn>Hãy tiếp tục di chuyển</v>
+
+2
+00:00:02,890 --> 00:00:05,443
+và khám phá thêm về Node.js.
+
+3
+00:00:07,230 --> 00:00:11,050
+Và bây giờ chúng ta hãy thực sự bắt đầu một tệp JavaScript mới.
+
+4
+00:00:11,050 --> 00:00:16,050
+Vì vậy, ngay trong thư mục gốc và tôi gọi nó là index.js,
+
+5
+00:00:16,220 --> 00:00:19,253
+chúng ta hãy giảm thiết bị đầu cuối ở đây một chút.
+
+6
+00:00:20,240 --> 00:00:23,750
+Được rồi, bây giờ hãy viết mã Node đầu tiên của chúng ta
+
+7
+00:00:23,750 --> 00:00:26,180
+ở đây trong một tập tin và tất cả những gì tôi sẽ làm
+
+8
+00:00:26,180 --> 00:00:28,897
+là tạo một biến xin chào.
+
+9
+00:00:28,897 --> 00:00:30,980
+(đánh máy)
+
+10
+00:00:32,260 --> 00:00:37,260
+Và sau đó đặt câu "Xin chào thế giới" cổ điển vào đó.
+
+11
+00:00:37,340 --> 00:00:39,930
+Vì vậy "Xin chào thế giới" đã được sử dụng theo truyền thống
+
+12
+00:00:39,930 --> 00:00:42,330
+khi bắt đầu một ngôn ngữ lập trình mới
+
+13
+00:00:42,330 --> 00:00:44,380
+và đó là điều chúng tôi đang làm ở đây.
+
+14
+00:00:46,450 --> 00:00:49,630
+Được rồi, bây giờ tôi đang đăng nhập vào bảng điều khiển
+
+15
+00:00:49,630 --> 00:00:54,630
+xin chào biến này, vì vậy những thứ rất rất đơn giản.
+
+16
+00:00:54,870 --> 00:00:59,400
+Hãy lưu nó và bây giờ hãy chạy tập tin này.
+
+17
+00:00:59,400 --> 00:01:03,070
+Vì vậy, trong JavaScript thông thường trên trình duyệt,
+
+18
+00:01:03,070 --> 00:01:06,040
+bây giờ chúng tôi sẽ bao gồm tệp JavaScript này
+
+19
+00:01:06,040 --> 00:01:08,760
+vào một số tệp HTML và sau đó mở ra
+
+20
+00:01:08,760 --> 00:01:12,350
+tệp HTML đó trong trình duyệt, phải không?
+
+21
+00:01:12,350 --> 00:01:16,060
+Nhưng ở đây với Node, chúng ta không cần phải làm bất cứ điều gì như vậy.
+
+22
+00:01:16,060 --> 00:01:18,793
+Tất cả những gì chúng tôi làm là sử dụng lệnh Node.
+
+23
+00:01:19,920 --> 00:01:22,430
+Nhưng bây giờ, chúng ta sẽ không nhấn 'Enter' ngay lập tức,
+
+24
+00:01:22,430 --> 00:01:25,600
+bởi vì điều đó sẽ đưa chúng ta trở lại REPL
+
+25
+00:01:25,600 --> 00:01:27,577
+nhưng thay vào đó chúng tôi muốn chạy tập tin này.
+
+26
+00:01:27,577 --> 00:01:30,240
+Và vì vậy tất cả những gì chúng ta phải làm là viết Node
+
+27
+00:01:31,558 --> 00:01:34,610
+và sau đó là tên của tệp, chẳng hạn như index.js,
+
+28
+00:01:34,610 --> 00:01:39,610
+nhấn 'Enter' và thực sự, ở đây chúng tôi có nhật ký "Xin chào thế giới".
+
+29
+00:01:40,470 --> 00:01:42,670
+Vậy xin chúc mừng, bạn vừa chạy
+
+30
+00:01:42,670 --> 00:01:45,710
+tập lệnh Node đầu tiên của bạn.
+
+31
+00:01:45,710 --> 00:01:49,210
+Bây giờ, điều đó không thực sự hữu ích lắm phải không?
+
+32
+00:01:49,210 --> 00:01:52,930
+Vậy hãy làm điều gì đó cao cấp hơn một chút.
+
+33
+00:01:52,930 --> 00:01:55,630
+Và hãy nhớ lời tôi đã nói ngay trong bài giảng đầu tiên
+
+34
+00:01:55,630 --> 00:01:58,670
+rằng với Node.js, chúng ta có thể làm được mọi điều tuyệt vời
+
+35
+00:01:58,670 --> 00:02:01,800
+điều mà chúng ta không thể làm được với JavaScript trong trình duyệt
+
+36
+00:02:01,800 --> 00:02:06,330
+ví dụ như đọc tập tin từ hệ thống tập tin, phải không?
+
+37
+00:02:06,330 --> 00:02:10,690
+Bây giờ để làm được điều đó, chúng ta cần sử dụng mô-đun Node.
+
+38
+00:02:10,690 --> 00:02:14,790
+Vì vậy, Node.js thực sự được xây dựng dựa trên khái niệm mô-đun này
+
+39
+00:02:14,790 --> 00:02:17,470
+nơi có tất cả các loại chức năng bổ sung
+
+40
+00:02:17,470 --> 00:02:20,060
+được lưu trữ trong một mô-đun.
+
+41
+00:02:20,060 --> 00:02:22,340
+Và trong trường hợp đọc tập tin,
+
+42
+00:02:22,340 --> 00:02:25,740
+đó là bên trong mô-đun FS.
+
+43
+00:02:25,740 --> 00:02:28,050
+Vậy làm cách nào để chúng ta mở các mô-đun này,
+
+44
+00:02:28,050 --> 00:02:30,810
+hoặc làm thế nào chúng ta thực sự có thể sử dụng chúng?
+
+45
+00:02:30,810 --> 00:02:35,810
+Vâng, chúng tôi yêu cầu chúng đưa vào mã của mình và sau đó lưu trữ
+
+46
+00:02:36,080 --> 00:02:40,140
+kết quả của hàm yêu cầu trong một biến.
+
+47
+00:02:40,140 --> 00:02:43,383
+Nghe có vẻ hơi phức tạp nên chúng ta hãy thực hiện nó một cách đơn giản.
+
+48
+00:02:44,850 --> 00:02:48,443
+Vì vậy chúng ta sẽ gọi FS tới kết quả
+
+49
+00:02:48,443 --> 00:02:50,170
+(đánh máy)
+
+50
+00:02:50,170 --> 00:02:54,580
+yêu cầu mô-đun FS.
+
+51
+00:02:54,580 --> 00:02:57,720
+Và FS ở đây là viết tắt của hệ thống tập tin.
+
+52
+00:02:57,720 --> 00:03:00,870
+Vì vậy, bằng cách sử dụng mô-đun này ở đây, chúng ta sẽ có quyền truy cập
+
+53
+00:03:00,870 --> 00:03:04,900
+các chức năng đọc và ghi dữ liệu
+
+54
+00:03:04,900 --> 00:03:07,570
+ngay vào hệ thống tập tin.
+
+55
+00:03:07,570 --> 00:03:11,670
+Vì vậy, một lần nữa, hãy gọi hàm này ở đây bằng tính năng tích hợp sẵn này
+
+56
+00:03:11,670 --> 00:03:14,850
+Tên mô-đun FS sau đó sẽ trả về một đối tượng
+
+57
+00:03:14,850 --> 00:03:18,640
+trong đó có rất nhiều chức năng mà chúng ta có thể sử dụng.
+
+58
+00:03:18,640 --> 00:03:22,230
+Và khôi phục đối tượng đó ngay vào biến FS
+
+59
+00:03:22,230 --> 00:03:24,500
+mà sau này chúng ta có thể sử dụng.
+
+60
+00:03:24,500 --> 00:03:26,500
+Chúng ta sẽ sử dụng nó trong video tiếp theo,
+
+61
+00:03:26,500 --> 00:03:29,310
+nhưng bây giờ tôi muốn xem nhanh
+
+62
+00:03:29,310 --> 00:03:31,510
+tại tài liệu Node với bạn,
+
+63
+00:03:31,510 --> 00:03:33,450
+để trong trường hợp bạn cần một số mô-đun khác
+
+64
+00:03:33,450 --> 00:03:35,900
+cho chính mình sau này, bạn luôn biết nơi nào
+
+65
+00:03:35,900 --> 00:03:38,050
+để tra cứu một số thông tin về nó.
+
+66
+00:03:38,050 --> 00:03:41,410
+Được rồi, vậy tài liệu của Node thực sự là một cái gì đó,
+
+67
+00:03:41,410 --> 00:03:45,033
+thực sự quan trọng mà mọi nhà phát triển Node đều phải biết.
+
+68
+00:03:46,630 --> 00:03:51,080
+Vì vậy, những gì chúng tôi làm là truy cập nodejs.org
+
+69
+00:03:51,080 --> 00:03:54,660
+và sau đó nhấn vào tab tài liệu ở đây
+
+70
+00:03:54,660 --> 00:03:57,150
+rồi chọn phiên bản Node bạn đang sử dụng
+
+71
+00:03:57,150 --> 00:03:58,760
+ở đây ở phía bên trái.
+
+72
+00:03:58,760 --> 00:04:01,460
+Vì vậy, tôi đang sử dụng phiên bản 10, v.v.
+
+73
+00:04:01,460 --> 00:04:03,710
+đó là cái tôi đang chọn ở đây
+
+74
+00:04:03,710 --> 00:04:06,220
+Và đó là tài liệu.
+
+75
+00:04:06,220 --> 00:04:08,490
+Ở phía bên trái, bạn có tất cả các loại
+
+76
+00:04:08,490 --> 00:04:10,163
+của các module khác nhau.
+
+77
+00:04:11,350 --> 00:04:16,090
+Ví dụ: bạn cũng có REPL,
+
+78
+00:04:16,090 --> 00:04:19,820
+vì vậy REPL là những gì chúng ta đã sử dụng trong bài giảng trước
+
+79
+00:04:19,820 --> 00:04:22,450
+và nếu bạn cần biết thêm một chút về nó,
+
+80
+00:04:22,450 --> 00:04:25,240
+ồ bạn có thể xuống đây và đọc
+
+81
+00:04:25,240 --> 00:04:27,410
+bất cứ điều gì bạn cần biết.
+
+82
+00:04:27,410 --> 00:04:30,310
+Ví dụ, lối ra mà tôi đã nói đến
+
+83
+00:04:30,310 --> 00:04:34,913
+được ghi lại ở đây và tất cả mọi thứ.
+
+84
+00:04:35,820 --> 00:04:38,200
+Được rồi, bạn thực sự cũng có thể sử dụng REPL
+
+85
+00:04:38,200 --> 00:04:41,350
+bên trong mã của bạn, điều này không có nhiều ý nghĩa
+
+86
+00:04:41,350 --> 00:04:42,883
+nhưng thực tế là có thể.
+
+87
+00:04:43,950 --> 00:04:48,150
+Vì vậy, một lần nữa tất cả các mô-đun được liệt kê ở đây ở phía bên trái
+
+88
+00:04:48,150 --> 00:04:51,943
+và cái mà chúng ta vừa triển khai là hệ thống tập tin.
+
+89
+00:04:52,890 --> 00:04:56,660
+Được rồi, ở dưới đây bạn có tất cả những thứ khác nhau
+
+90
+00:04:56,660 --> 00:05:00,410
+điều đó bây giờ sẽ không có nhiều ý nghĩa với bạn, được rồi,
+
+91
+00:05:00,410 --> 00:05:02,130
+nhưng điều đó không có vấn đề gì cả.
+
+92
+00:05:02,130 --> 00:05:05,420
+Đó là lý do tại sao chúng ta có toàn bộ khóa học này phía trước.
+
+93
+00:05:05,420 --> 00:05:07,870
+Bây giờ chỉ cần biết rằng trong trường hợp bạn cần bất cứ điều gì,
+
+94
+00:05:07,870 --> 00:05:11,660
+nó luôn có sẵn trong tài liệu dành cho bạn.
+
+95
+00:05:11,660 --> 00:05:13,600
+Ví dụ: trong video tiếp theo,
+
+96
+00:05:13,600 --> 00:05:18,400
+chúng tôi sẽ đọc một tập tin từ đĩa vào mã của chúng tôi.
+
+97
+00:05:18,400 --> 00:05:21,423
+Và chúng ta sẽ làm điều đó bằng cách sử dụng tính năng đồng bộ hóa tệp đã đọc.
+
+98
+00:05:22,760 --> 00:05:24,380
+Và ở đây bạn có tất cả thông tin
+
+99
+00:05:24,380 --> 00:05:27,850
+về chức năng cụ thể đó.
+
+100
+00:05:27,850 --> 00:05:29,160
+Được rồi, vậy nên trong video tiếp theo,
+
+101
+00:05:29,160 --> 00:05:31,790
+đó thực sự là những gì chúng ta sẽ làm.
+
+102
+00:05:31,790 --> 00:05:34,040
+Và trong phần này, bạn đã học cách viết
+
+103
+00:05:34,040 --> 00:05:37,470
+mã Node đầu tiên của riêng bạn bên trong
+
+104
+00:05:37,470 --> 00:05:39,900
+của một tệp JavaScript mới, rồi chạy
+
+105
+00:05:39,900 --> 00:05:42,440
+tập tin đó trong thiết bị đầu cuối.
+
+106
+00:05:42,440 --> 00:05:46,220
+Sau đó, chúng tôi cũng yêu cầu mô-đun hệ thống tập tin
+
+107
+00:05:46,220 --> 00:05:48,490
+và vì vậy, một lần nữa, trong video tiếp theo,
+
+108
+00:05:48,490 --> 00:05:52,460
+cuối cùng chúng tôi sẽ sử dụng nó và nhập một số tệp.
+
+109
+00:05:52,460 --> 00:05:53,293
+Gặp bạn sau.
+

@@ -1,3 +1,4 @@
+import os
 def combine_subtitles(sub1_path, sub2_path, output_path):
     with open(sub1_path, 'r', encoding='utf-8') as f1, open(sub2_path, 'r', encoding='utf-8') as f2:
         lines1 = f1.readlines()
@@ -36,8 +37,25 @@ def combine_subtitles(sub1_path, sub2_path, output_path):
 
         with open(output_path, 'w', encoding='utf-8') as out:
             out.writelines(combined_lines)
+def merge_subtitles_from_folders(folder1, folder2, output_folder):
+    # Lấy danh sách tất cả các file trong mỗi folder
+    files1 = sorted([f for f in os.listdir(folder1) if f.endswith('.srt')])
+    files2 = sorted([f for f in os.listdir(folder2) if f.endswith('.srt')])
 
+    # Đảm bảo output folder tồn tại
+    if not os.path.exists(output_folder):
+        os.makedirs(output_folder)
+
+    # Kết hợp từng cặp file
+    for f1, f2 in zip(files1, files2):
+        sub1_path = os.path.join(folder1, f1)
+        sub2_path = os.path.join(folder2, f2)
+        combined_output_path = os.path.join(output_folder, f"combined_{f1}")
+        combine_subtitles(sub1_path, sub2_path, combined_output_path)
 
 # Sử dụng hàm
-combine_subtitles('002 What Is Node.js and Why Use It_.en.srt',
-                  '002 What Is Node.js and Why Use It_.en.vi.srt', '002 What Is Node.js and Why Use It_.combined.srt')
+# combine_subtitles('002 What Is Node.js and Why Use It_.en.srt',
+#                   '002 What Is Node.js and Why Use It_.en.vi.srt', '002 What Is Node.js and Why Use It_.combined.srt')
+
+# Merge from folders
+merge_subtitles_from_folders('en', 'vi', 'combined')

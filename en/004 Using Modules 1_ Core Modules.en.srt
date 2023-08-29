@@ -1,0 +1,436 @@
+1
+00:00:01,460 --> 00:00:02,890
+<v Instructor>Let's keep moving</v>
+
+2
+00:00:02,890 --> 00:00:05,443
+and explore Node.js some more.
+
+3
+00:00:07,230 --> 00:00:11,050
+And so let's now actually start a new JavaScript file.
+
+4
+00:00:11,050 --> 00:00:16,050
+So right in the root folder, and I'm calling it index.js,
+
+5
+00:00:16,220 --> 00:00:19,253
+let's just decrease the terminal here a little bit.
+
+6
+00:00:20,240 --> 00:00:23,750
+Okay, so let's now write our very first Node code
+
+7
+00:00:23,750 --> 00:00:26,180
+here inside a file and all I'm gonna do
+
+8
+00:00:26,180 --> 00:00:28,897
+is to create a hello variable.
+
+9
+00:00:28,897 --> 00:00:30,980
+(typing)
+
+10
+00:00:32,260 --> 00:00:37,260
+And then putting the classic "Hello world" in there.
+
+11
+00:00:37,340 --> 00:00:39,930
+So "Hello world" has been traditionally used
+
+12
+00:00:39,930 --> 00:00:42,330
+when starting a new programming language
+
+13
+00:00:42,330 --> 00:00:44,380
+and that's kind of what we're doing here.
+
+14
+00:00:46,450 --> 00:00:49,630
+Okay, and now I'm logging to the console
+
+15
+00:00:49,630 --> 00:00:54,630
+this hello variable, so very very very simple stuff.
+
+16
+00:00:54,870 --> 00:00:59,400
+Give it a save and let's actually now run this file.
+
+17
+00:00:59,400 --> 00:01:03,070
+So, in normal JavaScript in a browser,
+
+18
+00:01:03,070 --> 00:01:06,040
+we would now include this JavaScript file
+
+19
+00:01:06,040 --> 00:01:08,760
+into some HTML file and then open up
+
+20
+00:01:08,760 --> 00:01:12,350
+that HTML file in a browser, right?
+
+21
+00:01:12,350 --> 00:01:16,060
+But here with Node, we don't need to do anything like that.
+
+22
+00:01:16,060 --> 00:01:18,793
+All we do is to use our Node command.
+
+23
+00:01:19,920 --> 00:01:22,430
+But now, we're not gonna hit 'Enter' right away,
+
+24
+00:01:22,430 --> 00:01:25,600
+because that would take us back to the REPL
+
+25
+00:01:25,600 --> 00:01:27,577
+but instead we want to run this file.
+
+26
+00:01:27,577 --> 00:01:30,240
+And so all we have to do is to write Node
+
+27
+00:01:31,558 --> 00:01:34,610
+and then the name of the file, so index.js,
+
+28
+00:01:34,610 --> 00:01:39,610
+hit 'Enter' and indeed, here we have our log "Hello world."
+
+29
+00:01:40,470 --> 00:01:42,670
+So congratulations, you just ran
+
+30
+00:01:42,670 --> 00:01:45,710
+your very first Node script.
+
+31
+00:01:45,710 --> 00:01:49,210
+Now, that isn't really all that useful, is it?
+
+32
+00:01:49,210 --> 00:01:52,930
+So let's do something a bit more advanced.
+
+33
+00:01:52,930 --> 00:01:55,630
+And remember how I said right in the first lecture
+
+34
+00:01:55,630 --> 00:01:58,670
+that with Node.js, we can do all kinds of amazing things
+
+35
+00:01:58,670 --> 00:02:01,800
+that we cannot do with JavaScript in the browser
+
+36
+00:02:01,800 --> 00:02:06,330
+like for example reading files from the file system, right?
+
+37
+00:02:06,330 --> 00:02:10,690
+Now in order to do that, we need to use a Node module.
+
+38
+00:02:10,690 --> 00:02:14,790
+So Node.js is really built around this concept of modules
+
+39
+00:02:14,790 --> 00:02:17,470
+where all kinds of additional functionality
+
+40
+00:02:17,470 --> 00:02:20,060
+are stored in a module.
+
+41
+00:02:20,060 --> 00:02:22,340
+And in the case for reading files,
+
+42
+00:02:22,340 --> 00:02:25,740
+that is inside the FS module.
+
+43
+00:02:25,740 --> 00:02:28,050
+So how do we open up these modules,
+
+44
+00:02:28,050 --> 00:02:30,810
+or how can we actually use them?
+
+45
+00:02:30,810 --> 00:02:35,810
+Well, we do require them into our code and then store
+
+46
+00:02:36,080 --> 00:02:40,140
+the result of the requiring function in a variable.
+
+47
+00:02:40,140 --> 00:02:43,383
+So that sounds a bit complicated, so let's simply do it.
+
+48
+00:02:44,850 --> 00:02:48,443
+So we will call FS to the result
+
+49
+00:02:48,443 --> 00:02:50,170
+(typing)
+
+50
+00:02:50,170 --> 00:02:54,580
+of requiring the FS module.
+
+51
+00:02:54,580 --> 00:02:57,720
+And FS here stands for file system.
+
+52
+00:02:57,720 --> 00:03:00,870
+So by using this module here, we will get access
+
+53
+00:03:00,870 --> 00:03:04,900
+to functions for reading data and writing data
+
+54
+00:03:04,900 --> 00:03:07,570
+right to the file system.
+
+55
+00:03:07,570 --> 00:03:11,670
+So again, calling this function here with this built-in
+
+56
+00:03:11,670 --> 00:03:14,850
+FS module name will then return an object
+
+57
+00:03:14,850 --> 00:03:18,640
+in which there are lots of functions that we can use.
+
+58
+00:03:18,640 --> 00:03:22,230
+And restore that object right into the FS variable
+
+59
+00:03:22,230 --> 00:03:24,500
+that we can then later use.
+
+60
+00:03:24,500 --> 00:03:26,500
+We are going to use it in the next video,
+
+61
+00:03:26,500 --> 00:03:29,310
+but for now I want to quickly take a look
+
+62
+00:03:29,310 --> 00:03:31,510
+at the Node documentation with you,
+
+63
+00:03:31,510 --> 00:03:33,450
+so that in case you need some other module
+
+64
+00:03:33,450 --> 00:03:35,900
+for yourself later, you always know where
+
+65
+00:03:35,900 --> 00:03:38,050
+to look up some information about it.
+
+66
+00:03:38,050 --> 00:03:41,410
+Okay, so the Node documentations are something really,
+
+67
+00:03:41,410 --> 00:03:45,033
+really important for every Node developer to know about.
+
+68
+00:03:46,630 --> 00:03:51,080
+So, what we do is to go to nodejs.org
+
+69
+00:03:51,080 --> 00:03:54,660
+and then hit the documentations tab here
+
+70
+00:03:54,660 --> 00:03:57,150
+and then select the Node version that you're using
+
+71
+00:03:57,150 --> 00:03:58,760
+here on the left side.
+
+72
+00:03:58,760 --> 00:04:01,460
+So I am using version 10, and so
+
+73
+00:04:01,460 --> 00:04:03,710
+that's the one I'm choosing here.
+
+74
+00:04:03,710 --> 00:04:06,220
+And so that is the documentation.
+
+75
+00:04:06,220 --> 00:04:08,490
+Here on the left side, you have all kinds
+
+76
+00:04:08,490 --> 00:04:10,163
+of different modules.
+
+77
+00:04:11,350 --> 00:04:16,090
+For example, you have the REPL as well,
+
+78
+00:04:16,090 --> 00:04:19,820
+so the REPL is what we used in the last lecture
+
+79
+00:04:19,820 --> 00:04:22,450
+and if you need to know a bit more about it,
+
+80
+00:04:22,450 --> 00:04:25,240
+well you can come down here and read
+
+81
+00:04:25,240 --> 00:04:27,410
+whatever you need to know.
+
+82
+00:04:27,410 --> 00:04:30,310
+For example, the exit that I talked about
+
+83
+00:04:30,310 --> 00:04:34,913
+is documented here and well, all kinds of stuff.
+
+84
+00:04:35,820 --> 00:04:38,200
+Okay, you can also actually use the REPL
+
+85
+00:04:38,200 --> 00:04:41,350
+inside your code, which doesn't make much sense
+
+86
+00:04:41,350 --> 00:04:42,883
+but is actually possible.
+
+87
+00:04:43,950 --> 00:04:48,150
+So again all the modules are listed here on the left side
+
+88
+00:04:48,150 --> 00:04:51,943
+and the one that we just implemented is the file system.
+
+89
+00:04:52,890 --> 00:04:56,660
+Okay, and so down here you have all this different stuff
+
+90
+00:04:56,660 --> 00:05:00,410
+that for now will not make much sense to you, okay,
+
+91
+00:05:00,410 --> 00:05:02,130
+but that's no problem at all.
+
+92
+00:05:02,130 --> 00:05:05,420
+That's why we have this whole course ahead of us.
+
+93
+00:05:05,420 --> 00:05:07,870
+For now just know that in case you need anything,
+
+94
+00:05:07,870 --> 00:05:11,660
+it is always available in the documentation for you.
+
+95
+00:05:11,660 --> 00:05:13,600
+So for example, in the next video,
+
+96
+00:05:13,600 --> 00:05:18,400
+we will read a file from the disk to our code.
+
+97
+00:05:18,400 --> 00:05:21,423
+And we're gonna do that using the read file sync.
+
+98
+00:05:22,760 --> 00:05:24,380
+And so here you have all the information
+
+99
+00:05:24,380 --> 00:05:27,850
+about that specific function.
+
+100
+00:05:27,850 --> 00:05:29,160
+Okay, and so in the next video,
+
+101
+00:05:29,160 --> 00:05:31,790
+that is actually what we're gonna do.
+
+102
+00:05:31,790 --> 00:05:34,040
+And in this one, you learned how to write
+
+103
+00:05:34,040 --> 00:05:37,470
+your own very first Node code inside
+
+104
+00:05:37,470 --> 00:05:39,900
+of a new JavaScript file, and then run
+
+105
+00:05:39,900 --> 00:05:42,440
+that file in the terminal.
+
+106
+00:05:42,440 --> 00:05:46,220
+Then we also required the file system module
+
+107
+00:05:46,220 --> 00:05:48,490
+and so, again, in the next video,
+
+108
+00:05:48,490 --> 00:05:52,460
+we will finally use it and import some files.
+
+109
+00:05:52,460 --> 00:05:53,293
+See you then.
+

@@ -1,0 +1,544 @@
+1
+00:00:01,540 --> 00:00:03,040
+<v Instructor>Welcome back.</v>
+
+2
+00:00:03,040 --> 00:00:06,120
+So I hope that you have Node installed
+
+3
+00:00:06,120 --> 00:00:08,100
+on your computer at this point.
+
+4
+00:00:08,100 --> 00:00:09,830
+And so, let's now actually go ahead
+
+5
+00:00:09,830 --> 00:00:12,793
+and use Node for the very first time.
+
+6
+00:00:14,530 --> 00:00:16,760
+And to get started with the section,
+
+7
+00:00:16,760 --> 00:00:19,760
+please go into the course starter files
+
+8
+00:00:19,760 --> 00:00:24,300
+and copy this folder to your working directory, okay?
+
+9
+00:00:24,300 --> 00:00:27,120
+Now, if you didn't download the course files yet,
+
+10
+00:00:27,120 --> 00:00:29,360
+please go to the GitHub repository,
+
+11
+00:00:29,360 --> 00:00:31,670
+that is linked all over the course,
+
+12
+00:00:31,670 --> 00:00:35,390
+and you will find all the files that you need in there.
+
+13
+00:00:35,390 --> 00:00:37,290
+Then after that, go ahead and open up
+
+14
+00:00:37,290 --> 00:00:39,770
+the folder in your code editor.
+
+15
+00:00:39,770 --> 00:00:42,070
+And I'm using VS Code here.
+
+16
+00:00:42,070 --> 00:00:45,400
+And I actually already loaded it up.
+
+17
+00:00:45,400 --> 00:00:49,310
+So here is this Node Farm folder.
+
+18
+00:00:49,310 --> 00:00:51,290
+Now in this video, we will actually
+
+19
+00:00:51,290 --> 00:00:53,500
+not yet start with the project.
+
+20
+00:00:53,500 --> 00:00:55,760
+But instead, we're gonna interact with Node
+
+21
+00:00:55,760 --> 00:00:58,010
+using the command line.
+
+22
+00:00:58,010 --> 00:01:00,530
+And for that, I'm gonna use the built-in terminal
+
+23
+00:01:00,530 --> 00:01:04,270
+that VS Code has, hitting control back take for that.
+
+24
+00:01:04,270 --> 00:01:07,090
+So this command that you see here, actually.
+
+25
+00:01:07,090 --> 00:01:11,180
+Or you can go to View and Terminal.
+
+26
+00:01:11,180 --> 00:01:13,540
+Now if you prefer to use another application
+
+27
+00:01:13,540 --> 00:01:15,720
+for the terminal, that's fine as well
+
+28
+00:01:15,720 --> 00:01:17,330
+but throughout this course,
+
+29
+00:01:17,330 --> 00:01:19,150
+I'm always going to use the terminal
+
+30
+00:01:19,150 --> 00:01:21,330
+that is built in right into VS Code
+
+31
+00:01:21,330 --> 00:01:23,600
+so that we don't have to jump around
+
+32
+00:01:23,600 --> 00:01:26,040
+between different windows so much.
+
+33
+00:01:26,040 --> 00:01:29,640
+Now, to start writing some Node code here in the console,
+
+34
+00:01:29,640 --> 00:01:31,753
+all we have to do is to write node,
+
+35
+00:01:32,790 --> 00:01:36,150
+given that you have Node.js installed on your computer
+
+36
+00:01:36,150 --> 00:01:38,490
+and then, just hit enter.
+
+37
+00:01:38,490 --> 00:01:41,320
+And this will then open up the Node REPL,
+
+38
+00:01:41,320 --> 00:01:45,080
+which stands for read-eval-print loop.
+
+39
+00:01:45,080 --> 00:01:47,910
+So basically here, we can write JavaScript code
+
+40
+00:01:47,910 --> 00:01:50,390
+just like in a normal terminal.
+
+41
+00:01:50,390 --> 00:01:52,363
+For example, we can define variables.
+
+42
+00:01:56,250 --> 00:01:58,830
+And so, here it is.
+
+43
+00:01:58,830 --> 00:02:01,760
+So, we just defined the name variable.
+
+44
+00:02:01,760 --> 00:02:04,030
+And in fact, we can write any JavaScript code
+
+45
+00:02:04,030 --> 00:02:06,590
+that we like in here, okay?
+
+46
+00:02:06,590 --> 00:02:08,890
+So, that's because at the end of the day,
+
+47
+00:02:08,890 --> 00:02:12,080
+Node.js is really just a JavaScript run time,
+
+48
+00:02:12,080 --> 00:02:14,210
+as we just saw before.
+
+49
+00:02:14,210 --> 00:02:15,780
+So what else can we do?
+
+50
+00:02:15,780 --> 00:02:19,100
+Well, any type of expression really, will work.
+
+51
+00:02:19,100 --> 00:02:22,680
+Let's just do some math here, for example.
+
+52
+00:02:22,680 --> 00:02:24,730
+Okay so any JavaScript will work
+
+53
+00:02:24,730 --> 00:02:26,760
+and you see that we actually
+
+54
+00:02:26,760 --> 00:02:31,040
+defined this variable here using const so that is ES6
+
+55
+00:02:31,040 --> 00:02:34,750
+and that is absolutely no problem in Node.js.
+
+56
+00:02:34,750 --> 00:02:38,100
+So it supports ES6 in all the newer versions
+
+57
+00:02:38,100 --> 00:02:40,800
+out of the box without any problem.
+
+58
+00:02:40,800 --> 00:02:42,250
+That's because we're not running
+
+59
+00:02:42,250 --> 00:02:44,850
+this JavaScript in any browser,
+
+60
+00:02:44,850 --> 00:02:48,380
+but it will always run on the server, okay?
+
+61
+00:02:48,380 --> 00:02:52,400
+So, in fact, we just took JavaScript out of the browser
+
+62
+00:02:52,400 --> 00:02:56,350
+and we're running it inside of this Node application.
+
+63
+00:02:56,350 --> 00:02:59,470
+Now if we wanted to exit JS REPL,
+
+64
+00:02:59,470 --> 00:03:03,750
+so again, this read-eval-print loop, that Node gives us,
+
+65
+00:03:03,750 --> 00:03:06,210
+there are different ways of doing that.
+
+66
+00:03:06,210 --> 00:03:08,310
+The first one is to write exit
+
+67
+00:03:08,310 --> 00:03:09,660
+or actually .exit
+
+68
+00:03:11,420 --> 00:03:16,060
+and so this exited this Node process, this REPL
+
+69
+00:03:16,060 --> 00:03:18,300
+and so that started again so that I can
+
+70
+00:03:18,300 --> 00:03:20,050
+show you some more stuff.
+
+71
+00:03:20,050 --> 00:03:25,050
+So again, just type Node, hit enter, and that's it.
+
+72
+00:03:25,260 --> 00:03:27,000
+Oh, and, by the way, if you want to
+
+73
+00:03:27,000 --> 00:03:29,160
+clear your terminal like I just did,
+
+74
+00:03:29,160 --> 00:03:31,910
+all you have to do is to hit command K
+
+75
+00:03:31,910 --> 00:03:34,890
+and that will then clear the command line
+
+76
+00:03:34,890 --> 00:03:39,160
+and probably on Windows, that is control K, okay?
+
+77
+00:03:39,160 --> 00:03:43,890
+Anyway, we use the .exit to exit the REPL
+
+78
+00:03:43,890 --> 00:03:47,030
+but we can also hit control D,
+
+79
+00:03:47,030 --> 00:03:49,980
+and that's not command, it is really control,
+
+80
+00:03:49,980 --> 00:03:53,600
+so control D will do the same.
+
+81
+00:03:53,600 --> 00:03:55,610
+But, let's quickly enter it again
+
+82
+00:03:55,610 --> 00:03:58,830
+'cause there's some more stuff that I want to show you.
+
+83
+00:03:58,830 --> 00:04:00,960
+So if you hit tab right now,
+
+84
+00:04:00,960 --> 00:04:02,870
+maybe you have to tap it twice,
+
+85
+00:04:02,870 --> 00:04:05,590
+sometimes that happens for some reason,
+
+86
+00:04:05,590 --> 00:04:07,880
+but anyway, by hitting tab,
+
+87
+00:04:07,880 --> 00:04:10,220
+you can see all the global variables
+
+88
+00:04:10,220 --> 00:04:12,720
+that are available in Node.
+
+89
+00:04:12,720 --> 00:04:14,100
+So you have all the kind of stuff
+
+90
+00:04:14,100 --> 00:04:15,370
+that we're already used to
+
+91
+00:04:15,370 --> 00:04:17,670
+like the Array constructor
+
+92
+00:04:17,670 --> 00:04:19,830
+or the String constructor
+
+93
+00:04:19,830 --> 00:04:21,290
+or Math
+
+94
+00:04:21,290 --> 00:04:23,900
+or Number over here,
+
+95
+00:04:23,900 --> 00:04:25,950
+but then there's also all kinds of stuff
+
+96
+00:04:25,950 --> 00:04:27,670
+that belongs to Node.
+
+97
+00:04:27,670 --> 00:04:31,840
+For example, your https and fs or crypto
+
+98
+00:04:31,840 --> 00:04:33,950
+and these are Node modules
+
+99
+00:04:33,950 --> 00:04:35,710
+that we're gonna talk more about
+
+100
+00:04:35,710 --> 00:04:37,880
+a bit later in the section.
+
+101
+00:04:37,880 --> 00:04:40,650
+But for now, you see that we have all kinds
+
+102
+00:04:40,650 --> 00:04:43,120
+of global variables that we can access
+
+103
+00:04:43,120 --> 00:04:47,320
+whenever we want in Node.js, okay?
+
+104
+00:04:47,320 --> 00:04:51,000
+Also, another nice trick is the underscore variable.
+
+105
+00:04:51,000 --> 00:04:53,440
+So let me first show you something.
+
+106
+00:04:53,440 --> 00:04:55,270
+So another calculation for example.
+
+107
+00:04:55,270 --> 00:04:59,220
+Three times eight gives 24
+
+108
+00:04:59,220 --> 00:05:03,710
+and now was can use underscore plus six
+
+109
+00:05:03,710 --> 00:05:07,180
+and so this will give us 30
+
+110
+00:05:07,180 --> 00:05:09,610
+and so that means that underscore
+
+111
+00:05:09,610 --> 00:05:12,330
+is basically your previous result.
+
+112
+00:05:12,330 --> 00:05:16,110
+So we had 24, and so underscore here is 24 now
+
+113
+00:05:16,110 --> 00:05:19,330
+and 24 plus six makes 30.
+
+114
+00:05:19,330 --> 00:05:22,130
+So if we now did underscore minus 30,
+
+115
+00:05:22,130 --> 00:05:24,410
+that will give us zero, right?
+
+116
+00:05:24,410 --> 00:05:26,390
+And yeah, it did.
+
+117
+00:05:26,390 --> 00:05:31,390
+Okay, and finally, the tab that you just pressed before,
+
+118
+00:05:31,460 --> 00:05:34,440
+you can also press that, for example,
+
+119
+00:05:34,440 --> 00:05:36,010
+on one of these constructor
+
+120
+00:05:36,010 --> 00:05:37,930
+that we already know like string.
+
+121
+00:05:37,930 --> 00:05:41,240
+So String. and now by adding tab,
+
+122
+00:05:41,240 --> 00:05:43,420
+you can see all the methods or properties
+
+123
+00:05:43,420 --> 00:05:45,350
+that are available to us.
+
+124
+00:05:45,350 --> 00:05:47,860
+Again, sometimes you have to hit it twice
+
+125
+00:05:47,860 --> 00:05:49,400
+but then here we are.
+
+126
+00:05:49,400 --> 00:05:53,140
+So we have, for example, length or hasOwnProperty,
+
+127
+00:05:53,140 --> 00:05:55,810
+and all these kinds of methods here
+
+128
+00:05:55,810 --> 00:05:58,330
+that we know already, right?
+
+129
+00:05:58,330 --> 00:06:00,470
+And now, to exit the REPL,
+
+130
+00:06:00,470 --> 00:06:03,863
+remember all you have to do is hit control D.
+
+131
+00:06:04,882 --> 00:06:08,700
+Okay, then command K to clear the console,
+
+132
+00:06:08,700 --> 00:06:10,200
+and that's it.
+
+133
+00:06:10,200 --> 00:06:12,230
+So that's all I wanted to show you
+
+134
+00:06:12,230 --> 00:06:14,680
+in this very, very first video.
+
+135
+00:06:14,680 --> 00:06:17,530
+So basically that we can write JavaScript now
+
+136
+00:06:17,530 --> 00:06:21,603
+outside of the browser using Node.js like this.
+

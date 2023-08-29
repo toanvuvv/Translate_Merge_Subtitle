@@ -1,0 +1,72 @@
+1
+00:00:00,253 --> 00:00:02,320
+(nhạc nhẹ nhàng vui tươi)
+
+2
+00:00:02,320 --> 00:00:04,340
+<v ->Chào mừng đến với phần đầu tiên</v>
+
+3
+00:00:04,340 --> 00:00:07,270
+trong chương trình đào tạo Node.js hoàn chỉnh này.
+
+4
+00:00:07,270 --> 00:00:08,630
+Và trong phần này,
+
+5
+00:00:08,630 --> 00:00:11,800
+chúng tôi sẽ thực hiện những bước đầu tiên với Node.js
+
+6
+00:00:11,800 --> 00:00:16,073
+và các mô-đun cốt lõi của nó bằng cách xây dựng một dự án nhỏ và thú vị.
+
+7
+00:00:17,030 --> 00:00:18,870
+Vì vậy mục tiêu của tôi với phần
+
+8
+00:00:18,870 --> 00:00:23,220
+là giúp bạn viết mã Nodes.js nhanh nhất có thể,
+
+9
+00:00:23,220 --> 00:00:26,970
+nhưng không phải lo lắng quá nhiều về cách mọi thứ hoạt động
+
+10
+00:00:26,970 --> 00:00:28,430
+đằng sau hậu trường,
+
+11
+00:00:28,430 --> 00:00:31,193
+vì điều đó sẽ diễn ra ở những phần sau.
+
+12
+00:00:32,150 --> 00:00:35,430
+Vì vậy chúng ta sẽ bắt đầu sử dụng nhiều khái niệm mới
+
+13
+00:00:35,430 --> 00:00:37,210
+tất cả cùng một lúc ở đây,
+
+14
+00:00:37,210 --> 00:00:40,090
+và vì vậy đừng lo lắng, nếu bạn không hiểu
+
+15
+00:00:40,090 --> 00:00:42,580
+tất cả các chi tiết kỹ thuật ngay lập tức.
+
+16
+00:00:42,580 --> 00:00:45,103
+Điều đó hoàn toàn bình thường, được chứ?
+
+17
+00:00:45,940 --> 00:00:49,332
+Dù sao thì bây giờ chúng ta hãy bắt đầu cuộc hành trình này.
+
+18
+00:00:49,332 --> 00:00:52,499
+(nhạc nhẹ nhàng vui tươi)
+

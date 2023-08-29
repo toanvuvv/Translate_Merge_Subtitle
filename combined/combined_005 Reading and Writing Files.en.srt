@@ -1,0 +1,615 @@
+1
+00:00:01,410 --> 00:00:03,890
+<font color="#ff9980"><v Narrator>This is a really exciting lecture</v>
+</font><v Người tường thuật>Đây là một bài giảng thực sự thú vị</v>
+
+2
+00:00:03,890 --> 00:00:07,230
+<font color="#ff9980">cause you're gonna learn how to read data from files,
+</font>vì bạn sẽ học cách đọc dữ liệu từ tập tin,
+
+3
+00:00:07,230 --> 00:00:10,393
+<font color="#ff9980">and also how to write data into files.
+</font>và cả cách ghi dữ liệu vào tập tin.
+
+4
+00:00:12,110 --> 00:00:15,050
+<font color="#ff9980">And we already imported the built-in module
+</font>Và chúng tôi đã nhập mô-đun tích hợp sẵn
+
+5
+00:00:15,050 --> 00:00:17,450
+<font color="#ff9980">that we need for that in the last lecture,
+</font>mà chúng ta cần cho điều đó trong bài giảng vừa qua,
+
+6
+00:00:17,450 --> 00:00:20,910
+<font color="#ff9980">and so let's now get rid of this code
+</font>và bây giờ chúng ta hãy loại bỏ mã này
+
+7
+00:00:20,910 --> 00:00:23,990
+<font color="#ff9980">and start using the FS module.
+</font>và bắt đầu sử dụng mô-đun FS.
+
+8
+00:00:23,990 --> 00:00:26,707
+<font color="#ff9980">So we use fs.readfilesync, okay.
+</font>Vì vậy chúng ta sử dụng fs.readfilesync, được chứ.
+
+9
+00:00:30,720 --> 00:00:34,250
+<font color="#ff9980">And sync stands for synchronous,
+</font>Và đồng bộ là viết tắt của đồng bộ,
+
+10
+00:00:34,250 --> 00:00:36,210
+<font color="#ff9980">and you will start learning about synchronous
+</font>và bạn sẽ bắt đầu tìm hiểu về đồng bộ
+
+11
+00:00:36,210 --> 00:00:40,240
+<font color="#ff9980">and asynchronous right in the next video, okay.
+</font>và không đồng bộ ngay trong video tiếp theo, được chứ.
+
+12
+00:00:40,240 --> 00:00:43,760
+<font color="#ff9980">So this is the synchronous version of file reading.
+</font>Vì vậy, đây là phiên bản đọc tập tin đồng bộ.
+
+13
+00:00:43,760 --> 00:00:47,040
+<font color="#ff9980">There is also an asynchronous version.
+</font>Ngoài ra còn có một phiên bản không đồng bộ.
+
+14
+00:00:47,040 --> 00:00:50,880
+<font color="#ff9980">So, the read file sync function takes two arguments.
+</font>Vì vậy, chức năng đồng bộ hóa tệp đọc có hai đối số.
+
+15
+00:00:50,880 --> 00:00:54,640
+<font color="#ff9980">The first one is the path to the file that we're reading
+</font>Đầu tiên là đường dẫn đến file chúng ta đang đọc
+
+16
+00:00:54,640 --> 00:00:57,300
+<font color="#ff9980">and then also the character encoded.
+</font>và sau đó là ký tự được mã hóa.
+
+17
+00:00:57,300 --> 00:00:59,700
+<font color="#ff9980">So, first the path to the file,
+</font>Vì vậy, đầu tiên là đường dẫn đến tệp,
+
+18
+00:00:59,700 --> 00:01:02,163
+<font color="#ff9980">and the file is in the txt folder,
+</font>và tập tin nằm trong thư mục txt,
+
+19
+00:01:04,130 --> 00:01:06,973
+<font color="#ff9980">and it is the input one.
+</font>và nó là đầu vào.
+
+20
+00:01:08,170 --> 00:01:12,260
+<font color="#ff9980">So, this text that I have here about the avocado
+</font>Vì vậy, văn bản tôi có ở đây về quả bơ
+
+21
+00:01:12,260 --> 00:01:15,740
+<font color="#ff9980">is what we're gonna read into a variable.
+</font>là những gì chúng ta sẽ đọc vào một biến.
+
+22
+00:01:15,740 --> 00:01:18,060
+<font color="#ff9980">And I'm not sure if you're gonna be able
+</font>Và tôi không chắc liệu bạn có thể
+
+23
+00:01:18,060 --> 00:01:21,950
+<font color="#ff9980">to see this emoji here right on your operating system,
+</font>để thấy biểu tượng cảm xúc này ngay trên hệ điều hành của bạn,
+
+24
+00:01:21,950 --> 00:01:24,710
+<font color="#ff9980">but if you're on Windows 8 or Windows 10
+</font>nhưng nếu bạn đang dùng Windows 8 hoặc Windows 10
+
+25
+00:01:24,710 --> 00:01:26,960
+<font color="#ff9980">then that's probably going to work just fine.
+</font>thì có lẽ nó sẽ hoạt động tốt.
+
+26
+00:01:28,000 --> 00:01:31,420
+<font color="#ff9980">Okay, so we specified a path there,
+</font>Được rồi, chúng tôi đã chỉ định một đường dẫn ở đó,
+
+27
+00:01:31,420 --> 00:01:33,730
+<font color="#ff9980">and there are multiple ways of doing that,
+</font>và có nhiều cách để làm điều đó,
+
+28
+00:01:33,730 --> 00:01:36,573
+<font color="#ff9980">but for now I'm gonna go with the simplest one.
+</font>nhưng bây giờ tôi sẽ chọn cách đơn giản nhất.
+
+29
+00:01:37,490 --> 00:01:42,490
+<font color="#ff9980">So, all I'm gonna do is set it in the /txt/input.txt.
+</font>Vì vậy, tất cả những gì tôi sẽ làm là đặt nó vào /txt/input.txt.
+
+30
+00:01:47,460 --> 00:01:50,470
+<font color="#ff9980">So again, we're starting at the home folder,
+</font>Một lần nữa, chúng ta lại bắt đầu từ thư mục gốc,
+
+31
+00:01:50,470 --> 00:01:52,100
+<font color="#ff9980">which is basically the folder
+</font>về cơ bản là thư mục
+
+32
+00:01:52,100 --> 00:01:55,350
+<font color="#ff9980">where the index.js file is located,
+</font>nơi chứa tệp index.js,
+
+33
+00:01:55,350 --> 00:01:57,430
+<font color="#ff9980">so that's the dot in there,
+</font>vậy đó là dấu chấm ở đó,
+
+34
+00:01:57,430 --> 00:02:00,060
+<font color="#ff9980">and then we move into the txt folder,
+</font>và sau đó chúng tôi chuyển vào thư mục txt,
+
+35
+00:02:00,060 --> 00:02:02,633
+<font color="#ff9980">and from there input.txt.
+</font>và từ đó input.txt.
+
+36
+00:02:03,670 --> 00:02:05,080
+<font color="#ff9980">Then here the second one we have
+</font>Sau đó, đây là cái thứ hai chúng ta có
+
+37
+00:02:05,080 --> 00:02:07,550
+<font color="#ff9980">to define the character encoding,
+</font>để xác định mã hóa ký tự,
+
+38
+00:02:07,550 --> 00:02:10,320
+<font color="#ff9980">which is utf8, usually,
+</font>thường là utf8,
+
+39
+00:02:10,320 --> 00:02:12,710
+<font color="#ff9980">at least if you're just using English.
+</font>ít nhất là nếu bạn chỉ sử dụng tiếng Anh.
+
+40
+00:02:12,710 --> 00:02:15,200
+<font color="#ff9980">Okay, and if you don't specify this,
+</font>Được rồi, và nếu bạn không chỉ rõ điều này,
+
+41
+00:02:15,200 --> 00:02:18,770
+<font color="#ff9980">we get back something called a buffer, okay,
+</font>chúng ta lấy lại thứ gọi là bộ đệm, được rồi,
+
+42
+00:02:18,770 --> 00:02:20,210
+<font color="#ff9980">and that's not really what we want.
+</font>và đó thực sự không phải là điều chúng ta muốn.
+
+43
+00:02:20,210 --> 00:02:22,900
+<font color="#ff9980">We really just want the text.
+</font>Chúng tôi thực sự chỉ muốn văn bản.
+
+44
+00:02:22,900 --> 00:02:26,770
+<font color="#ff9980">And so, calling this function here will now read the data
+</font>Và vì vậy, gọi hàm này ở đây bây giờ sẽ đọc dữ liệu
+
+45
+00:02:26,770 --> 00:02:29,980
+<font color="#ff9980">from the file and return it to us,
+</font>từ tập tin và gửi lại cho chúng tôi,
+
+46
+00:02:29,980 --> 00:02:31,600
+<font color="#ff9980">and so we need save that somewhere
+</font>và vì vậy chúng ta cần lưu nó ở đâu đó
+
+47
+00:02:31,600 --> 00:02:34,083
+<font color="#ff9980">and we put it into a variable.
+</font>và chúng tôi đặt nó vào một biến.
+
+48
+00:02:35,200 --> 00:02:40,200
+<font color="#ff9980">So let's say textIn because it's a more text input.
+</font>Vì vậy, hãy nói textIn vì đó là kiểu nhập văn bản nhiều hơn.
+
+49
+00:02:43,430 --> 00:02:46,780
+<font color="#ff9980">Okay, and then let's log it to the console
+</font>Được rồi, sau đó hãy đăng nhập nó vào bảng điều khiển
+
+50
+00:02:46,780 --> 00:02:49,510
+<font color="#ff9980">just to see if it works.
+</font>chỉ để xem nó có hoạt động không.
+
+51
+00:02:49,510 --> 00:02:53,230
+<font color="#ff9980">Give it a second, and now we need to run this here again.
+</font>Hãy đợi một chút và bây giờ chúng ta cần chạy lại cái này ở đây.
+
+52
+00:02:53,230 --> 00:02:56,370
+<font color="#ff9980">So in the terminal, I can just use the up arrow
+</font>Vì vậy, trong thiết bị đầu cuối, tôi chỉ có thể sử dụng mũi tên lên
+
+53
+00:02:56,370 --> 00:02:57,993
+<font color="#ff9980">to run the previous command.
+</font>để chạy lệnh trước đó.
+
+54
+00:02:59,230 --> 00:03:02,540
+<font color="#ff9980">So here it is nodeindex.js again.
+</font>Vì vậy, đây lại là nodeindex.js.
+
+55
+00:03:02,540 --> 00:03:07,540
+<font color="#ff9980">Hit return, and let's see, and indeed here we go.
+</font>Nhấn quay lại, và hãy xem, và thực sự chúng ta đã bắt đầu.
+
+56
+00:03:07,550 --> 00:03:11,090
+<font color="#ff9980">So here is the content of that file.
+</font>Vì vậy, đây là nội dung của tập tin đó.
+
+57
+00:03:11,090 --> 00:03:12,560
+<font color="#ff9980">So, perfect.
+</font>Rất hoàn hảo.
+
+58
+00:03:12,560 --> 00:03:15,900
+<font color="#ff9980">We now know how to read stuff from files.
+</font>Bây giờ chúng ta biết cách đọc nội dung từ các tập tin.
+
+59
+00:03:15,900 --> 00:03:17,700
+<font color="#ff9980">Congratulations.
+</font>Chúc mừng.
+
+60
+00:03:17,700 --> 00:03:22,700
+<font color="#ff9980">Okay, but we also want to know how to write to files.
+</font>Được rồi, nhưng chúng tôi cũng muốn biết cách ghi vào tập tin.
+
+61
+00:03:23,010 --> 00:03:26,520
+<font color="#ff9980">So let's create some new variable here with some more text,
+</font>Vì vậy, hãy tạo một số biến mới ở đây với một số văn bản khác,
+
+62
+00:03:26,520 --> 00:03:29,423
+<font color="#ff9980">and then write it into a new file.
+</font>rồi ghi nó vào một tập tin mới.
+
+63
+00:03:30,490 --> 00:03:35,233
+<font color="#ff9980">So let's call that one textOut, so for output.
+</font>Vì vậy, hãy gọi đó là một textOut, để có đầu ra.
+
+64
+00:03:36,180 --> 00:03:38,630
+<font color="#ff9980">And basically let's just write a string
+</font>Và về cơ bản hãy viết một chuỗi
+
+65
+00:03:38,630 --> 00:03:41,653
+<font color="#ff9980">where we will then include this text in.
+</font>nơi chúng tôi sẽ đưa văn bản này vào.
+
+66
+00:03:42,520 --> 00:03:44,680
+<font color="#ff9980">I'm gonna be using a template string here,
+</font>Tôi sẽ sử dụng chuỗi mẫu ở đây,
+
+67
+00:03:44,680 --> 00:03:46,160
+<font color="#ff9980">and at this point I'm gonna assume
+</font>và tại thời điểm này tôi sẽ giả sử
+
+68
+00:03:46,160 --> 00:03:50,270
+<font color="#ff9980">that you're kinda familiar with the es6 syntax, okay.
+</font>bạn đã khá quen với cú pháp es6 rồi.
+
+69
+00:03:50,270 --> 00:03:52,560
+<font color="#ff9980">So we already used const here,
+</font>Vì vậy, chúng tôi đã sử dụng const ở đây,
+
+70
+00:03:52,560 --> 00:03:57,530
+<font color="#ff9980">which is an es6 way of declaring variables instead of var,
+</font>đó là một cách khai báo biến của ES6 thay vì var,
+
+71
+00:03:57,530 --> 00:04:01,410
+<font color="#ff9980">and now the template string, which is another es6 thing.
+</font>và bây giờ là chuỗi mẫu, một thứ khác của es6.
+
+72
+00:04:01,410 --> 00:04:04,050
+<font color="#ff9980">So before the es6, if you wanted to add something
+</font>Vì vậy, trước es6, nếu bạn muốn thêm thứ gì đó
+
+73
+00:04:04,050 --> 00:04:07,870
+<font color="#ff9980">to text in, you would have to use the plus operator.
+</font>để nhắn tin, bạn sẽ phải sử dụng toán tử dấu cộng.
+
+74
+00:04:07,870 --> 00:04:12,870
+<font color="#ff9980">So let's say, "this is" and then space and then text in.
+</font>Vì vậy, giả sử "đây là" rồi dấu cách rồi nhắn tin.
+
+75
+00:04:18,170 --> 00:04:21,330
+<font color="#ff9980">Okay, so you would have to use the plus operator,
+</font>Được rồi, vậy bạn sẽ phải sử dụng toán tử dấu cộng,
+
+76
+00:04:21,330 --> 00:04:23,440
+<font color="#ff9980">but if it's a template string it's much easier.
+</font>nhưng nếu đó là một chuỗi mẫu thì dễ dàng hơn nhiều.
+
+77
+00:04:23,440 --> 00:04:27,770
+<font color="#ff9980">All we have to do is use the backticks, then some text,
+</font>Tất cả những gì chúng ta phải làm là sử dụng dấu backticks, sau đó là một số văn bản,
+
+78
+00:04:27,770 --> 00:04:29,380
+<font color="#ff9980">and then into this string you can
+</font>và sau đó vào chuỗi này bạn có thể
+
+79
+00:04:29,380 --> 00:04:31,453
+<font color="#ff9980">very easily plug in the variable.
+</font>rất dễ dàng cắm vào biến.
+
+80
+00:04:32,765 --> 00:04:37,383
+<font color="#ff9980">So let's say, "This is what we know about the avocado."
+</font>Vì vậy hãy nói, "Đây là những gì chúng ta biết về quả bơ."
+
+81
+00:04:40,370 --> 00:04:45,370
+<font color="#ff9980">Then we use this syntax to input the variable, okay,
+</font>Sau đó chúng ta sử dụng cú pháp này để nhập biến, được rồi,
+
+82
+00:04:46,840 --> 00:04:50,220
+<font color="#ff9980">and so basically inside of these curly braces here
+</font>và về cơ bản là bên trong các dấu ngoặc nhọn này
+
+83
+00:04:50,220 --> 00:04:52,960
+<font color="#ff9980">we can write any JavaScript that we want.
+</font>chúng ta có thể viết bất kỳ JavaScript nào chúng ta muốn.
+
+84
+00:04:52,960 --> 00:04:56,950
+<font color="#ff9980">So it's not just for plugging in variables straight away,
+</font>Vì vậy, nó không chỉ để cắm các biến ngay lập tức,
+
+85
+00:04:56,950 --> 00:04:58,630
+<font color="#ff9980">we can also do a lot of calculations
+</font>chúng ta cũng có thể thực hiện rất nhiều phép tính
+
+86
+00:04:58,630 --> 00:05:02,830
+<font color="#ff9980">or any javaScript expression that we wanted in here.
+</font>hoặc bất kỳ biểu thức javaScript nào mà chúng tôi muốn ở đây.
+
+87
+00:05:02,830 --> 00:05:05,823
+<font color="#ff9980">Now, let's say a new line character.
+</font>Bây giờ, hãy nói một ký tự dòng mới.
+
+88
+00:05:06,980 --> 00:05:09,383
+<font color="#ff9980">So that's a new line, okay.
+</font>Vậy đó là một dòng mới, được chứ.
+
+89
+00:05:11,360 --> 00:05:14,870
+<font color="#ff9980">And just to show you that we can actually use JavaScript
+</font>Và chỉ để cho bạn thấy rằng chúng tôi thực sự có thể sử dụng JavaScript
+
+90
+00:05:14,870 --> 00:05:18,240
+<font color="#ff9980">inside of these curly braces here.
+</font>bên trong những dấu ngoặc nhọn này ở đây.
+
+91
+00:05:18,240 --> 00:05:21,463
+<font color="#ff9980">So this dollar sign and then curly braces.
+</font>Vì vậy, ký hiệu đô la này và sau đó là dấu ngoặc nhọn.
+
+92
+00:05:22,900 --> 00:05:27,900
+<font color="#ff9980">So date, or actually date like this, dot now.
+</font>Vì vậy, hãy hẹn hò, hoặc thực sự hẹn hò như thế này, hãy chấm ngay bây giờ.
+
+93
+00:05:28,450 --> 00:05:31,420
+<font color="#ff9980">Okay, so that is our string,
+</font>Được rồi, đó là chuỗi của chúng tôi,
+
+94
+00:05:31,420 --> 00:05:35,480
+<font color="#ff9980">which has this text here in together with the text
+</font>có văn bản này ở đây cùng với văn bản
+
+95
+00:05:35,480 --> 00:05:38,290
+<font color="#ff9980">that we read before from the variable.
+</font>mà chúng ta đã đọc trước đó từ biến.
+
+96
+00:05:38,290 --> 00:05:42,070
+<font color="#ff9980">And so now let's write that to a new file.
+</font>Và bây giờ hãy viết nó vào một tập tin mới.
+
+97
+00:05:42,070 --> 00:05:44,800
+<font color="#ff9980">So again, we use the FS module,
+</font>Một lần nữa, chúng tôi sử dụng mô-đun FS,
+
+98
+00:05:44,800 --> 00:05:47,033
+<font color="#ff9980">and this time, writeFileSync.
+</font>và lần này, writeFileSync.
+
+99
+00:05:51,200 --> 00:05:54,683
+<font color="#ff9980">Okay, and again we specify the path to the file,
+</font>Được rồi, và một lần nữa chúng ta chỉ định đường dẫn đến tệp,
+
+100
+00:05:55,680 --> 00:05:58,223
+<font color="#ff9980">and we still want it in the txt folder,
+</font>và chúng tôi vẫn muốn nó trong thư mục txt,
+
+101
+00:05:59,830 --> 00:06:04,830
+<font color="#ff9980">and we call it output.txt, okay.
+</font>và chúng tôi gọi nó là out.txt, được thôi.
+
+102
+00:06:06,560 --> 00:06:08,710
+<font color="#ff9980">And now we have to actually specify
+</font>Và bây giờ chúng ta phải xác định rõ
+
+103
+00:06:08,710 --> 00:06:12,520
+<font color="#ff9980">what we want to write into that file, right,
+</font>những gì chúng ta muốn ghi vào tập tin đó, phải không,
+
+104
+00:06:12,520 --> 00:06:15,523
+<font color="#ff9980">and tell us the text out variable.
+</font>và cho chúng tôi biết biến văn bản.
+
+105
+00:06:16,720 --> 00:06:19,280
+<font color="#ff9980">And this doesn't return anything meaningful
+</font>Và điều này không trả lại bất cứ điều gì có ý nghĩa
+
+106
+00:06:19,280 --> 00:06:22,780
+<font color="#ff9980">until we don't save anything to any variable.
+</font>cho đến khi chúng ta không lưu bất kỳ thứ gì vào bất kỳ biến nào.
+
+107
+00:06:22,780 --> 00:06:27,380
+<font color="#ff9980">All we do is to finally log something more to the console,
+</font>Tất cả những gì chúng tôi làm cuối cùng là ghi thêm thứ gì đó vào bảng điều khiển,
+
+108
+00:06:27,380 --> 00:06:31,033
+<font color="#ff9980">like just informing if the file has been written.
+</font>giống như chỉ thông báo nếu tập tin đã được viết.
+
+109
+00:06:34,830 --> 00:06:37,680
+<font color="#ff9980">Okay, so let's test it out again.
+</font>Được rồi, vậy hãy kiểm tra lại lần nữa.
+
+110
+00:06:37,680 --> 00:06:40,163
+<font color="#ff9980">I'm gonna clear the console with command K.
+</font>Tôi sẽ xóa bảng điều khiển bằng lệnh K.
+
+111
+00:06:41,700 --> 00:06:46,600
+<font color="#ff9980">Hit the arrow up key, enter, and maybe you saw it.
+</font>Nhấn phím mũi tên lên, enter và có thể bạn đã nhìn thấy nó.
+
+112
+00:06:46,600 --> 00:06:50,210
+<font color="#ff9980">We here now have this new file called Output,
+</font>Bây giờ chúng ta có tệp mới này có tên là Đầu ra,
+
+113
+00:06:50,210 --> 00:06:52,757
+<font color="#ff9980">and if I open it up, then you see,
+</font>và nếu tôi mở nó ra thì bạn sẽ thấy,
+
+114
+00:06:52,757 --> 00:06:54,660
+<font color="#ff9980">"This is what we know about the avocado,"
+</font>"Đây là những gì chúng ta biết về quả bơ,"
+
+115
+00:06:54,660 --> 00:06:58,620
+<font color="#ff9980">which is what we wrote in the index.js,
+</font>đó là những gì chúng tôi đã viết trong index.js,
+
+116
+00:06:58,620 --> 00:07:01,020
+<font color="#ff9980">and then this is the text that came
+</font>và sau đó đây là văn bản đến
+
+117
+00:07:01,020 --> 00:07:04,620
+<font color="#ff9980">before from the input file, right.
+</font>trước từ tập tin đầu vào, phải.
+
+118
+00:07:04,620 --> 00:07:06,810
+<font color="#ff9980">Then the new line that we created,
+</font>Sau đó, dòng mới mà chúng tôi đã tạo,
+
+119
+00:07:06,810 --> 00:07:09,280
+<font color="#ff9980">and then created on this date basically.
+</font>và sau đó được tạo vào ngày này về cơ bản.
+
+120
+00:07:09,280 --> 00:07:10,980
+<font color="#ff9980">So this is date.now,
+</font>Vậy đây là ngày.bây giờ,
+
+121
+00:07:10,980 --> 00:07:14,753
+<font color="#ff9980">so it's just a timestamp in milliseconds.
+</font>vì vậy nó chỉ là dấu thời gian tính bằng mili giây.
+
+122
+00:07:16,590 --> 00:07:18,400
+<font color="#ff9980">All right, and this is how you read
+</font>Được rồi, và đây là cách bạn đọc
+
+123
+00:07:18,400 --> 00:07:22,423
+<font color="#ff9980">and write to and from files in Node.JS.
+</font>và ghi vào và từ các tệp trong Node.JS.
+

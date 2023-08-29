@@ -1,0 +1,72 @@
+1
+00:00:00,253 --> 00:00:02,320
+(light playful music)
+
+2
+00:00:02,320 --> 00:00:04,340
+<v ->Welcome to the first section</v>
+
+3
+00:00:04,340 --> 00:00:07,270
+in this complete Node.js bootcamp.
+
+4
+00:00:07,270 --> 00:00:08,630
+And in this section,
+
+5
+00:00:08,630 --> 00:00:11,800
+we will take our very first steps with Node.js
+
+6
+00:00:11,800 --> 00:00:16,073
+and its core modules by building a small and fun project.
+
+7
+00:00:17,030 --> 00:00:18,870
+So my goal with the section
+
+8
+00:00:18,870 --> 00:00:23,220
+is to get you writing Nodes.js code as fast as possible,
+
+9
+00:00:23,220 --> 00:00:26,970
+but without worrying too much about how everything works
+
+10
+00:00:26,970 --> 00:00:28,430
+behind the scenes,
+
+11
+00:00:28,430 --> 00:00:31,193
+because that will follow in later sections.
+
+12
+00:00:32,150 --> 00:00:35,430
+So we will start using a lot of new concepts
+
+13
+00:00:35,430 --> 00:00:37,210
+all at the same time here,
+
+14
+00:00:37,210 --> 00:00:40,090
+and so don't worry, if you don't understand
+
+15
+00:00:40,090 --> 00:00:42,580
+all the technical details right away.
+
+16
+00:00:42,580 --> 00:00:45,103
+That's just completely normal, all right?
+
+17
+00:00:45,940 --> 00:00:49,332
+Anyway, let's now get started on this journey.
+
+18
+00:00:49,332 --> 00:00:52,499
+(light playful music)
+
