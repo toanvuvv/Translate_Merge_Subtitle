@@ -36,8 +36,5 @@ def combine_subtitles(sub1_path, sub2_path, output_path):
         with open(output_path, 'w', encoding='utf-8') as out:
             out.writelines(combined_lines)
 
-
-
 # Sử dụng hàm
 combine_subtitles('002 What Is Node.js and Why Use It_.en.srt', '002 What Is Node.js and Why Use It_.en.vi.srt', '002 What Is Node.js and Why Use It_.combined.srt')
-
