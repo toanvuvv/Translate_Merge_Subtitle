@@ -9,7 +9,7 @@ def combine_subtitles(sub1_path, sub2_path, output_path):
         while i < len(lines1) and j < len(lines2):
             if lines1[i].strip().isdigit() and lines2[j].strip().isdigit():
                 # Add subtitle number
-                combined_lines.append(lines1[i])
+                combined_lines.append('\033[38;2;118;181;197m' + lines1[i] + '\033[0m')
                 i += 1
                 j += 1
 
@@ -34,6 +34,5 @@ def combine_subtitles(sub1_path, sub2_path, output_path):
 
         with open(output_path, 'w', encoding='utf-8') as out:
             out.writelines(combined_lines)
-
 # Sử dụng hàm
 combine_subtitles('002 What Is Node.js and Why Use It_.en.srt', '002 What Is Node.js and Why Use It_.en.vi.srt', '002 What Is Node.js and Why Use It_.combined.srt')
